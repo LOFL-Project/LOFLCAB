@@ -1,0 +1,19 @@
+---
+Name: AdRmsAdmin.msc
+Description: Active Directory Rights Management Services
+Updated: 2023-08-14
+Toolsets: 
+  - GUI
+RSAT
+Commands:
+  - Command: AdRmsAdmin.msc
+    Description: Active Directory Rights Management Services
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'Right click -> Add Cluster -> Connect to: Remote computer'
+    MitreAttack:
+Resources:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin
