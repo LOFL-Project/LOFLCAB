@@ -3,7 +3,7 @@ name: Update LOFLCAB-Project.github.io
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "yml/**.yml"
 
@@ -23,7 +23,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: LOFLCAB-Project/LOFLCAB-Project.github.io
-          publish_branch: master
+          publish_branch: main
           publish_dir: yml
           destination_dir: _loflcab
           enable_jekyll: true
