@@ -1,5 +1,5 @@
 ---
-name: Update LOFLCAB-Project.github.io
+name: Update LOFL-Project.github.io
 on:
   push:
     branches:
@@ -18,11 +18,11 @@ jobs:
         run: |
           for x in $(find yml/ -name '*.yml'); do echo "---" >> "$x"; mv "$x" "${x/%\.yml/.md}"; done
 
-      - name: Deploy to LOFLCAB-Project.github.io repo
+      - name: Deploy to LOFL-Project.github.io repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: LOFL-Project/LOFLCAB-Project.github.io
+          external_repository: LOFL-Project/LOFL-Project.github.io
           publish_branch: main
           publish_dir: yml
           destination_dir: _loflcab
