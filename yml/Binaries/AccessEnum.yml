@@ -1,8 +1,8 @@
 ---
 Name: AccessEnum.exe
 Description: Displays who has access to items within a directory or registry key
-Updated: 2023-08-14
-Toolsets: 
+Updated: 2023-07-01
+Toolsets:
   - GUI
   - Sysinternals
 Commands:
@@ -16,6 +16,7 @@ Commands:
     MitreAttack:
       - T1083
 Resources:
+Detections:
 Contributors:
     - Name: Arris Huijgen
       Handle: bitsadmin
