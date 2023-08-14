@@ -4,7 +4,7 @@ Description: Displays who has access to items within a directory or registry key
 Updated: 2023-08-14
 Toolsets: 
   - GUI
-Sysinternals
+  - Sysinternals
 Commands:
   - Command: AccessEnum.exe
     Description: Enumerate share permissions
@@ -19,4 +19,3 @@ Resources:
 Contributors:
     - Name: Arris Huijgen
       Handle: bitsadmin
-

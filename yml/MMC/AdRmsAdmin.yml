@@ -4,7 +4,7 @@ Description: Active Directory Rights Management Services
 Updated: 2023-08-14
 Toolsets: 
   - GUI
-RSAT
+  - RSAT
 Commands:
   - Command: AdRmsAdmin.msc
     Description: Active Directory Rights Management Services
@@ -17,4 +17,3 @@ Resources:
 Contributors:
     - Name: Arris Huijgen
       Handle: bitsadmin
-
