@@ -2,18 +2,18 @@
 
 First, thank you for contributing!
 
-When submitting new LOFLCABs, please submit a `yml` sourcefile (`yml/`) as these are used to generate everything else. Next, review `README.md` and ensure that your LOFLCAB meets the criteria--interesting or unexpected functionality that would be useful to an attacker.
+When submitting new LOFLCABs, please submit a `yml` sourcefile (`yml/`) as these are used to generate everything else. Next, review `README.md` and ensure that your LOFLCAB meets the criteria--interesting remote functionality that would be useful to an attacker.
 
 There's nothing special about the format. Just base your entry off an existing one and modify as required. Please ensure that you do not add or remove any of the fields; all are required.   
 
-There is a template that can be used located here if you do not want to copy one of the existing LOLs: https://github.com/LOFL-Project/LOFLCAB/blob/master/YML-Template.yml   
+There is a template that can be used located here if you do not want to copy one of the existing LOFLs: https://github.com/LOFL-Project/LOFLCAB/blob/master/YML-Template.yml   
 
 ## Functions and Toolsets
 It is important to use the predefined Functions and Toolsets to make sure the LOFL Project website works as expected. These are defined in the `functions.yml` and `toolsets.yml` files in the `_data` folder of https://github.com/LOFL-Project/LOFL-Project.github.io. For ease, also listed below.
 
 **Available functions**
 | Function  | Description                                                   |
-+-----------+---------------------------------------------------------------+
+|-----------|---------------------------------------------------------------|
 | Sessions  | The LOFLCAB can list and interact with sessions               |
 | Registry  | The LOFLCAB can query and write the registry                  |
 | Manage    | The LOFLCAB can manage services on a server                   |
@@ -28,7 +28,7 @@ It is important to use the predefined Functions and Toolsets to make sure the LO
 
 **Available toolsets**
 | Toolset      | Description                                                                                                                                         |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Builtin      | Natively built into Windows 10                                                                                                                      |
 | GUI          | Tool which has a graphical user interface                                                                                                           |
 | CIMSession   | Tool which uses a CIM session to interact with the remote computer. The New-CimSession cmdlet can be used to initiate the CIM session               |
