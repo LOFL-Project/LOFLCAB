@@ -1,0 +1,40 @@
+---
+Name: eventvwr.msc
+Description: Event Viewer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: eventvwr.exe DC1.ad.bitsadmin.com
+    Description: Event Viewer
+    Usecases:
+      - Clear the Security event log
+      - 'Disable certain logs (Right click -> Disable Log)'
+      - Identify source IPs from which certain users have logged in to chase after their workstations
+      - Configure the Security log to not overwrite events so it will just stop logging
+    Function: Logs
+    Comments:
+      - 'Alternatively, use [compmgmt.msc](../compmgmt) or launch the snap-in, right click the root node -> Connect to Another Computer'
+    MitreAttack:
+      - T1070.001
+      - T1562.002
+  - Command: 'eventvwr.msc /computer:DC1.ad.bitsadmin.com'
+    Description: Event Viewer
+    Usecases:
+      - Clear the Security event log
+      - 'Disable certain logs (Right click -> Disable Log)'
+      - Identify source IPs from which certain users have logged in to chase after their workstations
+      - Configure the Security log to not overwrite events so it will just stop logging
+    Function: Logs
+    Comments:
+      - 'Alternatively, use [compmgmt.msc](../compmgmt) or launch the snap-in, right click the root node -> Connect to Another Computer'
+    MitreAttack:
+      - T1070.001
+      - T1562.002
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

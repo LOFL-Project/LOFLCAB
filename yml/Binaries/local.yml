@@ -1,0 +1,28 @@
+---
+Name: local.exe
+Description: Displays members of local groups on remote servers or domains
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: local.exe Administrators \\W10.ad.bitsadmin.com
+    Description: List members of the Administrators group
+    Usecases:
+      - Reconnaissance
+    Function: Manage
+    Comments:
+      - Part of the Windows 2000 Resource Kit
+    MitreAttack:
+  - Command: 'local.exe "Domain Admins" ad.bitsadmin.com'
+    Description: 'List members of the "Domain Admins" group'
+    Usecases:
+      - Reconnaissance
+    Function: Manage
+    Comments:
+      - Part of the Windows 2000 Resource Kit
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

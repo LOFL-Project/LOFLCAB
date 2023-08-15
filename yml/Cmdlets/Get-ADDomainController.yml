@@ -1,0 +1,28 @@
+---
+Name: Get-ADDomainController
+Description: Gets one or more Active Directory domain controllers based on discoverable services criteria, search parameters or by providing a domain controller identifier, such as the NetBIOS name
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+Commands:
+  - Command: Get-ADDomainController -Filter * -Server ad.bitsadmin.com
+    Description: List all domain controllers
+    Usecases:
+      - Enumerate all domain controllers of a domain
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+  - Command: Get-ADDomainController -Discover -Service GlobalCatalog -DomainName ad.bitsadmin.com
+    Description: List domain controllers
+    Usecases:
+      - Obtain hostname and IP of a GC domain controller
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

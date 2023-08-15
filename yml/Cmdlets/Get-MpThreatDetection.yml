@@ -1,0 +1,23 @@
+---
+Name: Get-MpThreatDetection
+Description: Gets active and past malware threats that Windows Defender detected
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-MpThreatDetection -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Misc
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `Defender`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

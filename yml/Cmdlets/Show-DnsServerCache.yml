@@ -1,0 +1,23 @@
+---
+Name: Show-DnsServerCache
+Description: Shows the records in a DNS Server Cache
+Updated: 2023-07-01
+Toolsets:
+  - CIMSession
+  - RSAT
+Commands:
+  - Command: Show-DnsServerCache -CimSession $s
+    Description: Show DNS server cached DNS entries
+    Usecases:
+      - Reconnaissance on the network/Internet activities on the domain
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `DnsServer`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

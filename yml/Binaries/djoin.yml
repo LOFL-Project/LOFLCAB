@@ -1,0 +1,20 @@
+---
+Name: djoin.exe
+Description: Provision a computer account in the domain
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - TODO
+Commands:
+  - Command: djoin.exe /PROVISION /DOMAIN ad.bitsadmin.com /MACHINE hacker /SAVEFILE hacker.txt /DEFPWD /PRINTBLOB /NETBIOS hacker
+    Description: Provision new computer account
+    Usecases:
+    Function: Domain
+    Comments:
+      - Not sure if part of RSAT or not
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

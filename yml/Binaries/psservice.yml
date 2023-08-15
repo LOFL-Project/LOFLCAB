@@ -1,0 +1,20 @@
+---
+Name: psservice.exe
+Description: Lists or controls services on a local or remote system
+Updated: 2023-07-01
+Toolsets:
+  - Sysinternals
+Commands:
+  - Command: psservice.exe \\W10.ad.bitsadmin.com config
+    Description: List services
+    Usecases:
+      - Reconnaissance of installed services
+    Function: Processes
+    Comments:
+    MitreAttack:
+      - T1569.002
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

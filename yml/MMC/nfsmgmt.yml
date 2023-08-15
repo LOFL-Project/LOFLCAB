@@ -1,0 +1,21 @@
+---
+Name: nfsmgmt.msc
+Description: Services for NFS
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: nfsmgmt.msc
+    Description: Services for NFS
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Right click on root node -> Connect to another computer -> Another computer: `DC1.ad.bitsadmin.com` -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 5985/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

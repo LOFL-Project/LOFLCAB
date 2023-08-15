@@ -1,0 +1,22 @@
+---
+Name: Add-DnsClientNrptRule
+Description: Adds a rule to the NRPT
+Updated: 2023-07-01
+Toolsets:
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Add-DnsClientNrptRule -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `DnsClient`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

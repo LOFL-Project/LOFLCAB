@@ -1,0 +1,28 @@
+---
+Name: netdom.exe
+Description: Manage Active Directory domains and trust relationships from the command prompt
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - Server
+Commands:
+  - Command: 'netdom.exe join %computername% /domain:ad.bitsadmin.com'
+    Description: Join machine to domain
+    Usecases:
+    Function: Domain
+    Comments:
+      - Be aware that this will also push group policies and potentially security solutions
+    MitreAttack:
+  - Command: netdom.exe trust
+    Description: Add a trust
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'TODO: Complete command'
+    MitreAttack:
+      - T1484.002
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

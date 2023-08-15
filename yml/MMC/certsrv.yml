@@ -1,0 +1,23 @@
+---
+Name: certsrv.msc
+Description: Certificate Authority
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: 'certsrv.msc /COMPUTER:CASUB1.AD.BITSADMIN.COM'
+    Description: Certificate Authority
+    Usecases:
+      - Approve certificate requests
+    Function: Manage
+    Comments:
+      - 'Alternatively in the GUI, right click root node -> Retarget Certification Authority -> Another Computer: `CASUB1.ad.bitsadmin.com`'
+      - 'Note that the Certificate Templates section returns error `Template information could not be loaded: The specified domain either does not exist or could not be contacted`'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

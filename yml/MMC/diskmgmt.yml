@@ -1,0 +1,22 @@
+---
+Name: diskmgmt.msc
+Description: Disk Management
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: compmgmt.msc
+    Description: Disk Management
+    Usecases:
+    Function: Manage
+    Comments:
+      - See [compmgmt.msc](../compmgmt) how to use it against a remote host. Returns errors though when connecting, so does not seem to work.
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

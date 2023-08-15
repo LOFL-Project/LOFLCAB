@@ -1,0 +1,23 @@
+---
+Name: Win32_Environment
+Description: Represents an environment or system environment setting on a Windows computer system
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: 'New-CimInstance -ClassName Win32_Environment -Property @{Name="PATH";VariableValue="C:\hackertools; C:\Windows\System32;C:\Windows";UserName="<SYSTEM>"} -CimSession $s'
+    Description: Set environment variable
+    Usecases:
+      - Change PATH environment variable for search order hijacking
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'For the VariableValue, first obtain the current `PATH` using `Get-CimInstance` and then prefix it with the malicious path'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

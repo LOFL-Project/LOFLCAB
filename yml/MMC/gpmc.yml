@@ -1,0 +1,26 @@
+---
+Name: gpmc.msc
+Description: Group Policy Management
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: 'gpmc.msc /domain:ad.bitsadmin.com'
+    Description: Group Policy Management
+    Usecases:
+      - Create and link a malicious group policy to systems
+      - Force the update of group policy on all machines in an OU
+    Function: Domain
+    Comments:
+      - 'For remote domains, this needs to be executed from OffensiveDC. Also use the `/domain` parameter in the commandline. In View -> Options -> General, uncheck the "Enable trust detection" checkbox. Next, right click the root node -> Add forest'
+    MitreAttack:
+      - T1037.003
+      - T1484.001
+Resources:
+Detections:
+  - Port: 389/UDP
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

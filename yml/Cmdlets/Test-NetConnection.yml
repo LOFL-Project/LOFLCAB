@@ -1,0 +1,20 @@
+---
+Name: Test-NetConnection
+Description: Displays diagnostic information for a connection
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Test-NetConnection
+    Description: TODO
+    Usecases:
+    Function: Network
+    Comments:
+      - 'PowerShell Module: `NetTCPIP`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

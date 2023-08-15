@@ -1,0 +1,20 @@
+---
+Name: dsquery.exe
+Description: This tool's commands suite allow you to query the directory according to specified criteria. Each of the following dsquery commands finds objects of a specific object type, with the exception of dsquery *, which can query for any type of object
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - TODO
+Commands:
+  - Command: dsquery.exe
+    Description: TODO
+    Usecases:
+    Function: Domain
+    Comments:
+      - Not sure if part of RSAT or not
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

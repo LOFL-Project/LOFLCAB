@@ -1,0 +1,22 @@
+---
+Name: Get-VM
+Description: Gets the virtual machines from one or more Hyper-V hosts
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-VM -CimSession $s
+    Description: List VMs
+    Usecases:
+      - Reconnaissance on VMs running on a Hyper-V server
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `Hyper-V`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,24 @@
+---
+Name: Get-ScheduledTaskInfo
+Description: Gets run-time information for a scheduled task
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-ScheduledTaskInfo -CimSession $s -TaskName '\Microsoft\Windows\DiskCleanup\CleanupBackdoor'
+    Description: List details on scheduled task execution
+    Usecases:
+      - Determine past executions of implant
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `ScheduledTasks`'
+    MitreAttack:
+      - T1053.005
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

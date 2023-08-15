@@ -1,0 +1,24 @@
+---
+Name: MSFT_NetFirewallRule
+Description: Represents a Windows firewall rule
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: |
+      $fwrule = Get-CimInstance -Namespace ROOT\StandardCimv2 -ClassName MSFT_NetFirewallRule -Filter 'DisplayName="Remote Desktop - Shadow (TCP-In)"' -CimSession $s
+      $fwrule
+      $fwrule | Invoke-CimMethod -MethodName Enable
+    Description: Enable firewall rule
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\StandardCimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

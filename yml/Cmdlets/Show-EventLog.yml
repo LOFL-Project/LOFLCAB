@@ -1,0 +1,23 @@
+---
+Name: Show-EventLog
+Description: Displays the event logs of the local or a remote computer in Event Viewer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: Show-EventLog -ComputerName W10.ad.bitsadmin.com
+    Description: Show Windows event log
+    Usecases:
+      - 'Disable certain logs (Right click -> Disable Log)'
+      - Identify source IPs from which certain users have logged in to chase after their workstations
+    Function: Logs
+    Comments:
+      - 'Simply launches `mmc.exe eventvwr.msc /COMPUTER:W10.ad.bitsadmin.com`'
+      - Equivalent to [eventvwr.msc](../../MMC/eventvwr)
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

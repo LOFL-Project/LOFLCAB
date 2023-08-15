@@ -1,0 +1,19 @@
+---
+Name: logoff.exe
+Description: Terminates a session
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'logoff.exe rdp-tcp#0 /SERVER:W10.ad.bitsadmin.com'
+    Description: Logoff user
+    Usecases:
+      - Force logoff of a user
+    Function: Sessions
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

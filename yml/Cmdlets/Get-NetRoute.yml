@@ -1,0 +1,23 @@
+---
+Name: Get-NetRoute
+Description: Gets the IP route information from the IP routing table
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-NetRoute -CimSession $s
+    Description: List routing table
+    Usecases:
+      - Identify network routes
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `NetTCPIP`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

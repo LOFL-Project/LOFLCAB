@@ -1,0 +1,20 @@
+---
+Name: Get-ADReplicationSubnet
+Description: Returns a specific Active Directory subnet or a set of AD subnets based on a specified filter.
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+Commands:
+  - Command: Get-ADReplicationSubnet -Filter * -Server ad.bitsadmin.com | select Name,Location,Site
+    Description: List replication subnets
+    Usecases:
+      - Enumerate subnets in use in the domain; useful to add LOFL tun2socks routes
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

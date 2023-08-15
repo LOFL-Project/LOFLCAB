@@ -1,0 +1,28 @@
+---
+Name: adsiedit.msc
+Description: ADSI Edit
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: adsiedit.msc
+    Description: ADSI Edit
+    Usecases:
+      - Backdoor ACLs of AdminSDHolder container
+      - Weaken security ACLs of OUs
+      - Reset passwords
+      - View sensitive information like LAPS passwords in the attribute editor
+    Function: Manage
+    Comments:
+      - 'When it is launched from a `runas /netonly` prompt, it automatically connects to the right instance. Alternatively, right click the root node -> Connect to -> select Default (Domain or server that you logged in to)'
+      - Port 636/TCP is used in case SSL-based Encryption is selected
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 389/UDP
+  - Port: 389/TCP
+  - Port: 636/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

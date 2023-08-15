@@ -1,0 +1,23 @@
+---
+Name: Start-DscConfiguration
+Description: Applies configuration to nodes
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Start-DscConfiguration -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `PSDesiredStateConfiguration`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

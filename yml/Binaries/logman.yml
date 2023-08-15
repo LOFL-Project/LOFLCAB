@@ -1,0 +1,19 @@
+---
+Name: logman.exe
+Description: Creates and manages Event Trace Session and Performance logs and supports many functions of Performance Monitor from the command line
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: logman.exe query providers -s W10.ad.bitsadmin.com
+    Description: List ETW providers
+    Usecases:
+      - 'Identify ETW providers of security solutions that are installed, e.g. Sysinternals Sysmon''s `Microsoft-Windows-Sysmon provider`'
+    Function: Logs
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

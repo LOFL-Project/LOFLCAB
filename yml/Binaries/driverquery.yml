@@ -1,0 +1,20 @@
+---
+Name: driverquery.exe
+Description: Display a list of installed device drivers
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: driverquery.exe /s W10.ad.bitsadmin.com
+    Description: List drivers
+    Usecases:
+      - Identify drivers of security solutions that are installed
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - TA0043
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

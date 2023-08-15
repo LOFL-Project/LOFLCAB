@@ -1,0 +1,29 @@
+---
+Name: dssite.msc
+Description: Active Directory Sites and Services
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: dssite.msc /domain=AD.BITSADMIN.COM
+    Description: Manage domain
+    Usecases:
+      - Collect information about sites and IP subnets
+    Function: Domain
+    Comments:
+      - 'Does not work from the OffensiveDC, use `/server` parameter instead'
+    MitreAttack:
+  - Command: dssite.msc /server=DC1.ad.bitsadmin.com
+    Description: Manage specific server
+    Usecases:
+      - Collect information about sites and IP subnets
+    Function: Domain
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 389/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

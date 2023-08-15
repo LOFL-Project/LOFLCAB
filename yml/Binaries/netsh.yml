@@ -1,0 +1,31 @@
+---
+Name: netsh.exe
+Description: Display or modify the network configuration
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'netsh.exe -r W10.ad.bitsadmin.com advfirewall firewall show rule name="Remote Desktop - Shadow (TCP-In)"'
+    Description: Show firewall rule
+    Usecases:
+      - Determine the configuration of a certain firewall rule and whether it is active
+      - For example usage, see the Spying on users using RDP shadowing blog post (see resources)
+    Function: Network
+    Comments:
+    MitreAttack:
+      - T1562.004
+  - Command: 'netsh.exe -r W10.ad.bitsadmin.com advfirewall firewall set rule name="Remote Desktop - Shadow (TCP-In)" new enable=yes'
+    Description: Enable firewall rule
+    Usecases:
+      - Enable firewall rule
+      - For example usage, see the Spying on users using RDP shadowing blog post (see resources)
+    Function: Network
+    Comments:
+    MitreAttack:
+      - T1562.004
+Resources:
+  - https://blog.bitsadmin.com/blog/spying-on-users-using-rdp-shadowing
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

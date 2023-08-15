@@ -1,0 +1,32 @@
+---
+Name: Win32_ShadowCopy
+Description: Storage extent that represents a duplicate copy of the original volume at a previous time
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: |
+      $r = Invoke-CimMethod -ClassName Win32_ShadowCopy -MethodName Create -Arguments @{Volume='C:\'} -CimSession $s
+      $r
+    Description: Create new shadow copy
+    Usecases:
+    Function: Data
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+  - Command: 'Get-CimInstance -ClassName Win32_ShadowCopy -CimSession $s -Filter "ID=`"$($r.ShadowID)`""'
+    Description: Show details of a volume shadow copy
+    Usecases:
+      - 'Get shadow copy details for use with [Copy-Item](../../Cmdlets/Copy-Item) to obtain `SAM`/`SYSTEM`/`SECURITY`/`ntds.dit` files'
+    Function: Data
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

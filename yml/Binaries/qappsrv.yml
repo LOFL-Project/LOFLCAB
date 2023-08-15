@@ -1,0 +1,18 @@
+---
+Name: qappsrv.exe
+Description: Displays the available Remote Desktop Session Host servers on the network
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: qappsrv dc1.ad.bitsadmin.com
+    Description: Display information about Remote Desktop Session Host server
+    Usecases:
+    Function: Manage
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

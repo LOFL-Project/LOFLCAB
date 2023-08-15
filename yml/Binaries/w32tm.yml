@@ -1,0 +1,19 @@
+---
+Name: w32tm.exe
+Description: Synchronize the date and time
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'w32tm.exe /query /computer:W10.ad.bitsadmin.com /status /verbose'
+    Description: Show time details
+    Usecases:
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - T1124
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

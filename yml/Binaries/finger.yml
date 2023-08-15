@@ -1,0 +1,19 @@
+---
+Name: finger.exe
+Description: Displays information about a user on a specified system running the Finger service
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: finger.exe
+    Description: TODO
+    Usecases:
+    Function: Network
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

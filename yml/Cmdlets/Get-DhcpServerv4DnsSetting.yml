@@ -1,0 +1,22 @@
+---
+Name: Get-DhcpServerv4DnsSetting
+Description: Gets the DNS settings configured on the Dynamic Host Configuration Protocol (DHCP) server service for a specific scope, reservation, or server level
+Updated: 2023-07-01
+Toolsets:
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-DhcpServerv4DnsSetting -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `DhcpServer`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

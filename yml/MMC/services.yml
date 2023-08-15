@@ -1,0 +1,24 @@
+---
+Name: services.msc
+Description: Services
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: 'services.msc /computer:DC1.ad.bitsadmin.com'
+    Description: Services
+    Usecases:
+      - Identify security solutions running on the endpoint
+      - Stop/disable security services
+    Function: Manage
+    Comments:
+      - Quite slow to collect information on all services through SOCKS, performs 4 requests (Open/Query/something/Close) for every service. Better use [sc.exe](../../Binaries/sc) in case the name of the service is known
+    MitreAttack:
+      - T1569.002
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

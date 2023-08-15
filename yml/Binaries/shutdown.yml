@@ -1,0 +1,20 @@
+---
+Name: shutdown.exe
+Description: Shut down or restart local or remote computers, one at a time
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: shutdown.exe /r /f /t 0 /m \\W10.ad.bitsadmin.com
+    Description: Restart machine
+    Usecases:
+      - Affect availability of a computer
+    Function: Sessions
+    Comments:
+    MitreAttack:
+      - T1529
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

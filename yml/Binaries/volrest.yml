@@ -1,0 +1,24 @@
+---
+Name: volrest.exe
+Description: Previous Version command-line tool
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: volrest.exe \\W10.ad.bitsadmin.com\C$\Windows\System32\Config
+    Description: List snapshots of network share
+    Usecases:
+      - 'List snapshots of the config directory and then copy the `SAM`/`SECURITY`/`SYSTEM` files from that snapshot'
+    Function: Data
+    Comments:
+      - Also known as volume shadow copies
+      - Part of the Windows Server 2003 Resource Kit
+    MitreAttack:
+      - T1083
+      - T1003.002
+Resources:
+  - https://blog.bitsadmin.com/blog/extracting-credentials-from-remote-windows-system
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,20 @@
+---
+Name: Write-EventLog
+Description: Writes an event to an event log.
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Write-EventLog
+    Description: TODO
+    Usecases:
+    Function: Logs
+    Comments:
+      - 'PowerShell Module: `Microsoft.PowerShell.Management`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

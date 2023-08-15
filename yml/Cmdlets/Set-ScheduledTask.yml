@@ -1,0 +1,23 @@
+---
+Name: Set-ScheduledTask
+Description: Modifies a scheduled task
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Set-ScheduledTask -CimSession $s
+    Description: Update schedule task
+    Usecases:
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `ScheduledTasks`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

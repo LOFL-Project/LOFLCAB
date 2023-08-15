@@ -1,0 +1,19 @@
+---
+Name: waitfor.exe
+Description: Sends or waits for a signal on a system
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: waitfor.exe
+    Description: TODO
+    Usecases:
+    Function: Misc
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,34 @@
+---
+Name: New-CimSession
+Description: Creates a CIM session
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: $s = New-CimSession -ComputerName W10.ad.bitsadmin.com
+    Description: Creates a CIM session over WinRM
+    Usecases:
+      - Connect to remote machine to perform activities using the various WMI classes
+    Function: Manage
+    Comments:
+      - 'There are various other options for the `-Authentication` parameter that can be used'
+    MitreAttack:
+      - T1047
+      - T1021.006
+  - Command: |
+      $so = New-CimSessionOption -Protocol Dcom -Authentication Kerberos
+      $s = New-CimSession -ComputerName W10.ad.bitsadmin.com -SessionOption $so
+    Description: Creates a CIM session over RPC
+    Usecases:
+      - Connect to remote machine to perform activities using the various WMI classes
+    Function: Manage
+    Comments:
+      - 'There are various other options for the `-Authentication` parameter that can be used'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

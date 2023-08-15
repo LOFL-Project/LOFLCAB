@@ -1,0 +1,29 @@
+---
+Name: New-PSSession
+Description: Creates a persistent connection to a local or remote computer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - PSSession
+Commands:
+  - Command: $ps = New-PSSession -ComputerName W10.ad.bitsadmin.com
+    Description: Connect to WinRM
+    Usecases:
+    Function: Execute
+    Comments:
+      - Next, for example use [Enter-PSSession](../Enter-PSSession) to interactively enter the session or Invoke-Command to execute a command in the session
+    MitreAttack:
+      - T1021.006
+  - Command: '$ps = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://exch2019.ad.bitsadmin.com/PowerShell/ -Authentication Kerberos'
+    Description: Manage Microsoft Exchange Server
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Might require use of OffensiveDC in case error `ERROR_WSMAN_CLIENT_WORKGROUP_NO_KERBEROS` is returned on a non-domain joined machine'
+    MitreAttack:
+      - T1021.006
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

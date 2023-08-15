@@ -1,0 +1,27 @@
+---
+Name: pssuspend.exe
+Description: Suspends or resumes processes on a local or remote system
+Updated: 2023-07-01
+Toolsets:
+  - Sysinternals
+Commands:
+  - Command: pssuspend.exe -r \\W10.ad.bitsadmin.com procexp.exe
+    Description: Resume process
+    Usecases:
+    Function: Processes
+    Comments:
+      - Installs PsSuspend service
+    MitreAttack:
+  - Command: pssuspend.exe \\W10.ad.bitsadmin.com procexp.exe
+    Description: Suspend process
+    Usecases:
+      - Alternative to terminating a process
+    Function: Processes
+    Comments:
+      - Installs PsSuspend service
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

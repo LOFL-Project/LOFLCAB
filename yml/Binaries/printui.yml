@@ -1,0 +1,20 @@
+---
+Name: printui.exe
+Description: Automates many printer configuration tasks
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: rundll32.exe printui.dll,PrintUIEntry /im /c\\W10.ad.bitsadmin.com
+    Description: Add printer
+    Usecases:
+    Function: Misc
+    Comments:
+      - 'Launches the "Add Printer" wizard'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

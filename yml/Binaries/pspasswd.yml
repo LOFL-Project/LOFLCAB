@@ -1,0 +1,20 @@
+---
+Name: pspasswd.exe
+Description: Changes passwords on a local or remote system
+Updated: 2023-07-01
+Toolsets:
+  - Sysinternals
+Commands:
+  - Command: pspasswd.exe \\W10.ad.bitsadmin.com MyUser MyNewPassword
+    Description: Update password
+    Usecases:
+      - Update a user's password
+    Function: Sessions
+    Comments:
+    MitreAttack:
+      - T1531
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

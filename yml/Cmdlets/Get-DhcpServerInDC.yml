@@ -1,0 +1,22 @@
+---
+Name: Get-DhcpServerInDC
+Description: Retrieves the list of authorized computers running the Dynamic Host Configuration Protocol (DHCP) server service from Active Directory (AD)
+Updated: 2023-07-01
+Toolsets:
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-DhcpServerInDC -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `DhcpServer`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,25 @@
+---
+Name: dsa.msc
+Description: Active Directory Users and Computers
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: dsa.msc /server=DC1.ad.bitsadmin.com
+    Description: Active Directory Users and Computers
+    Usecases:
+      - Perform reconnaissance on users, groups and computers in the domain
+      - Add backdoor user or computer account
+      - Modify group membership
+      - View user's BitLocker recovery passwords
+    Function: Domain
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 389/TCP
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

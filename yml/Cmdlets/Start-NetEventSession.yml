@@ -1,0 +1,24 @@
+---
+Name: Start-NetEventSession
+Description: Starts event and packet capture for a network event session
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Start-NetEventSession -Name sess -CimSession $s
+    Description: TODO
+    Usecases:
+      - Sniff authentication traffic on a domain controller and locally crack the hashes
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - See all details in [New-NetEventSession](../New-NetEventSession)
+      - 'PowerShell Module: `NetEventPacketCapture`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

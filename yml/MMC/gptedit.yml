@@ -1,0 +1,21 @@
+---
+Name: gptedit.msc
+Description: Group Policy Starter GPO Editor
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: 'gptedit.msc /s /gtmpobject:"\\DC1.ad.bitsadmin.com\sysvol\ad.bitsadmin.com\StarterGPOs\{DE3EB8C2-A808-4509-9D89-D383F950AEDB}\"'
+    Description: Group Policy Starter GPO Editor
+    Usecases:
+    Function: Domain
+    Comments:
+      - Edit Group Policy Starter GPO directly based on the path
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

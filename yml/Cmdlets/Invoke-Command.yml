@@ -1,0 +1,33 @@
+---
+Name: Invoke-Command
+Description: Runs commands on local and remote computers
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - PSSession
+Commands:
+  - Command: Invoke-Command -ComputerName W10.ad.bitsadmin.com { Get-NetAdapter }
+    Description: Runs command
+    Usecases:
+    Function: Execute
+    Comments:
+      - 'Create PSSession `$ps` using [New-PSSession](../New-PSSession/)'
+      - 'PowerShell Module: `Microsoft.PowerShell.Core`'
+    MitreAttack:
+      - T1021.006
+      - T1059.001
+  - Command: Invoke-Command -Session $ps { Get-NetAdapter }
+    Description: Runs command
+    Usecases:
+    Function: Execute
+    Comments:
+      - 'Create PSSession `$ps` using [New-PSSession](../New-PSSession/)'
+      - 'PowerShell Module: `Microsoft.PowerShell.Core`'
+    MitreAttack:
+      - T1021.006
+      - T1059.001
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,22 @@
+---
+Name: Win32_SystemDriver
+Description: Represents the system driver for a base service
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: 
+    Description: 
+    Usecases:
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

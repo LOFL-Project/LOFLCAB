@@ -1,0 +1,53 @@
+---
+Name: sc.exe
+Description: Interact with the Service Control Manager database
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'sc.exe \\W10.ad.bitsadmin.com create MyService binpath= C:\Windows\implant.exe'
+    Description: Create service
+    Usecases:
+      - Create service pointing to implant binary
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1569.002
+      - T1543.003
+  - Command: sc.exe \\W10.ad.bitsadmin.com config wuauserv start= disabled
+    Description: Disable service
+    Usecases:
+      - Impair security defenses
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1489
+  - Command: sc.exe \\W10.ad.bitsadmin.com query
+    Description: List services
+    Usecases:
+      - Reconnaissance of installed services
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - TA0043
+  - Command: sc.exe \\W10.ad.bitsadmin.com start MyService
+    Description: Start service
+    Usecases:
+      - Launch implant
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1569.002
+  - Command: sc.exe \\W10.ad.bitsadmin.com stop wuauserv
+    Description: Stop service
+    Usecases:
+      - Impair security defenses
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1489
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

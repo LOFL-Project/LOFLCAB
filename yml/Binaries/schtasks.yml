@@ -1,0 +1,29 @@
+---
+Name: schtasks.exe
+Description: Create, delete, query, change, run and end scheduled tasks
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'schtasks.exe /S W10.ad.bitsadmin.com /Create /RU SYSTEM /SC HOURLY /TN "Print Spooler (x64)" /TR "C:\Windows\System32\spoolsv64.exe"'
+    Description: Create new task
+    Usecases:
+      - Command execution through scheduled task
+      - Persistence by registering a scheduled task
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1053.005
+  - Command: schtasks.exe /S W10.ad.bitsadmin.com
+    Description: List tasks
+    Usecases:
+      - List current tasks to identify a name that can be used for a new task to blend in
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - T1053.005
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

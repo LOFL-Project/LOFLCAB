@@ -1,0 +1,20 @@
+---
+Name: Get-WSManInstance
+Description: Displays management information for a resource instance specified by a Resource URI
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'Get-WSManInstance -ConnectionURI http://W10.ad.bitsadmin.com:5985/wsman shell -Enumerate'
+    Description: List WSMan connections
+    Usecases:
+      - Identify which WSMan sessions are currently active and from where
+    Function: Sessions
+    Comments:
+      - 'PowerShell Module: `Microsoft.WSMan.Management`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

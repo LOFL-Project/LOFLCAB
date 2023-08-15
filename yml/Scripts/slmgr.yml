@@ -1,0 +1,25 @@
+---
+Name: slmgr.vbs
+Description: Obtain volume activation information
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: cscript.exe slmgr.vbs W10.ad.bitsadmin.com /dlv
+    Description: Show Windows activation information
+    Usecases:
+    Function: Misc
+    Comments:
+    MitreAttack:
+  - Command: cscript.exe slmgr.vbs W10.ad.bitsadmin.com /upk
+    Description: Uninstall Windows product key
+    Usecases:
+      - Cripple Windows activation to maybe have an admin user connect to the system to fix it
+    Function: Misc
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

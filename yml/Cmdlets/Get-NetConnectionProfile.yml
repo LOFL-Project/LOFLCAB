@@ -1,0 +1,23 @@
+---
+Name: Get-NetConnectionProfile
+Description: Gets a connection profile
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-NetConnectionProfile -CimSession $s
+    Description: List active connection profiles
+    Usecases:
+      - Determine what connection profiles are active on the network interfaces
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `NetConnection`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,21 @@
+---
+Name: Start-VM
+Description: Starts a virtual machine
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Start-VM -Name 'Windows 10 22H2' -CimSession $s
+    Description: Start VM
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `Hyper-V`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

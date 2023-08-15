@@ -1,0 +1,22 @@
+---
+Name: ipsmsnap.dll
+Description: IP Security Monitor
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: mmc.exe
+    Description: IP Security Monitor
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Open via MMC''s Add/Remove Snap-ins, then right click the root node -> Add Computer -> The following computer: `DC1.ad.bitsadmin.com` -> OK'
+      - IPSec service needs to be running on the remote host
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

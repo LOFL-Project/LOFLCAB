@@ -1,0 +1,21 @@
+---
+Name: WdsMgmt.msc
+Description: Windows Deployment Services
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: WdsMgmt.msc
+    Description: Windows Deployment Services
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Right click on Servers -> Add Server -> Another computer: `DC1.ad.bitsadmin.com` -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

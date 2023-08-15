@@ -1,0 +1,22 @@
+---
+Name: Get-NetUDPEndpoint
+Description: Gets current UDP endpoint statistics
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-NetUDPEndpoint -CimSession $s
+    Description: Enumerate listening UDP ports
+    Usecases:
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `NetTCPIP`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

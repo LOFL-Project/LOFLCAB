@@ -1,0 +1,21 @@
+---
+Name: Get-Service
+Description: Gets the services on a local or remote computer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-Service -ComputerName W10.ad.bitsadmin.com
+    Description: List services
+    Usecases:
+      - Reconnaissance on installed services
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

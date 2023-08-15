@@ -1,0 +1,20 @@
+---
+Name: ndkping.exe
+Description: RDMA Ping Cmd
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: ndkping.exe
+    Description: TODO
+    Usecases:
+    Function: Network
+    Comments:
+      - Not sure what this is for
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

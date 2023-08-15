@@ -1,0 +1,20 @@
+---
+Name: Connect-WSMan
+Description: Connects to the WinRM service on a remote computer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Connect-WSMan
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'PowerShell Module: `Microsoft.WSMan.Management`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

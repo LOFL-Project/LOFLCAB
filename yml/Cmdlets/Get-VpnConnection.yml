@@ -1,0 +1,23 @@
+---
+Name: Get-VpnConnection
+Description: Retrieves the specified VPN connection profile information
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-VpnConnection -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: VpnClient'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

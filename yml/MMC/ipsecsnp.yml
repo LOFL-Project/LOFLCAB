@@ -1,0 +1,31 @@
+---
+Name: ipsecsnp.dll
+Description: IP Security Policy Management
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: mmc.exe
+    Description: IP Security Policy Management for a computer
+    Usecases:
+      - Weaken IPSec requirements
+    Function: Manage
+    Comments:
+      - 'Open via MMC''s Add/Remove Snap-In -> IP Security Policy Management -> Another Active Directory domain: `DC1.ad.bitsadmin.com` -> Finish -> OK'
+    MitreAttack:
+  - Command: mmc.exe
+    Description: IP Security Policy Management for domain
+    Usecases:
+      - Weaken IPSec requirements
+    Function: Manage
+    Comments:
+      - 'Open via MMC''s Add/Remove Snap-In -> IP Security Policy Management -> Another Active Directory domain: `ad.bitsadmin.com` -> Finish -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 389/UDP
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

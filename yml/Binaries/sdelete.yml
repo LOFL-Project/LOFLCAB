@@ -1,0 +1,20 @@
+---
+Name: sdelete.exe
+Description: Secure file delete
+Updated: 2023-07-01
+Toolsets:
+  - Sysinternals
+Commands:
+  - Command: sdelete \\W10.ad.bitsadmin.com\C$\backdoor.exe
+    Description: Securely delete a file
+    Usecases:
+      - Cleanup of traces
+    Function: Data
+    Comments:
+    MitreAttack:
+      - T1070.004
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

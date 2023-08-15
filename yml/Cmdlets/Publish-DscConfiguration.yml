@@ -1,0 +1,20 @@
+---
+Name: Publish-DscConfiguration
+Description: Publishes a DSC configuration to a set of computers
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Publish-DscConfiguration
+    Description: TODO
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'PowerShell Module: `PSDesiredStateConfiguration`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

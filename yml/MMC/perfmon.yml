@@ -1,0 +1,22 @@
+---
+Name: perfmon.msc
+Description: Performance Monitor
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: perfmon.msc
+    Description: Performance Monitor
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Action -> Connect to another computer -> Another computer: `DC1.ad.bitsadmin.com` -> OK'
+      - 'Requires "Remote Registry" service to be running on the remote host'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

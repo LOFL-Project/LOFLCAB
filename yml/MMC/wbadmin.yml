@@ -1,0 +1,23 @@
+---
+Name: wbadmin.msc
+Description: Windows Server Backup
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - Server
+Commands:
+  - Command: mmc.exe
+    Description: Windows Server Backup
+    Usecases:
+      - Purge backups?
+    Function: Manage
+    Comments:
+      - 'mmc.exe -> File -> Add/Remove Snap-In -> Windows Server Backup -> Add -> Another computer: `DC1.ad.bitsadmin.com` -> Finish -> OK'
+    MitreAttack:
+      - T1485
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

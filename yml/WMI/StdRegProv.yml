@@ -1,0 +1,37 @@
+---
+Name: StdRegProv
+Description: The StdRegProv class contains methods that manipulate system registry keys and values
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: 'Invoke-CimMethod -ClassName StdRegProv -MethodName GetDWORDValue -Arguments @{hDefKey=[uint32]2147483650; sSubKeyName="Software\Policies\Microsoft\Windows NT\Terminal Services"; sValueName="Shadow"} -CimSession $s'
+    Description: Query value
+    Usecases:
+    Function: Registry
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+  - Command: 'Invoke-CimMethod -ClassName StdRegProv -MethodName SetDWORDValue -Arguments @{hDefKey=[uint32]2147483650; sSubKeyName="Software\Policies\Microsoft\Windows NT\Terminal Services"; sValueName="Shadow"; uValue=[uint32]2} -CimSession $s'
+    Description: Set value
+    Usecases:
+    Function: Registry
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+  - Command: 'Invoke-CimMethod -ClassName StdRegProv -MethodName DeleteValue -Arguments @{hDefKey=[uint32]2147483650; sSubKeyName="Software\Policies\Microsoft\Windows NT\Terminal Services"; sValueName="Shadow"} -CimSession $s'
+    Description: Delete value
+    Usecases:
+    Function: Registry
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

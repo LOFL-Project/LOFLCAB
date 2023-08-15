@@ -1,0 +1,21 @@
+---
+Name: tsadmin.msc
+Description: Remote Desktop Services Manager
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - Server
+Commands:
+  - Command: tsadmin.msc
+    Description: Remote Desktop Services Manager
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Removed in Server 2012+. Copy `tsadmin.msc` and related files from Windows Server 2008 R2'
+    MitreAttack:
+Resources:
+  - https://woshub.com/how-to-run-tsadmin-msc-and-tsconfig-msc-snap-ins-on-windows-server-2012-rds/
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

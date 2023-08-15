@@ -1,0 +1,20 @@
+---
+Name: Test-Connection
+Description: Sends ICMP echo request packets, or pings, to one or more computers.
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Test-Connection DC1.ad.bitsadmin.com
+    Description: 
+    Usecases:
+    Function: Network
+    Comments:
+      - By default uses ICMP, however provides a number of parameters related to authentication
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

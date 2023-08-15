@@ -1,0 +1,19 @@
+---
+Name: TpmVscMgr.exe
+Description: Create and delete TPM virtual smart cards
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: TpmVscMgr.exe create /machine W11.ad.bitsadmin.com /name MyVSC /pin default /adminkey random /generate
+    Description: Create virtual smart card
+    Usecases:
+    Function: Misc
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

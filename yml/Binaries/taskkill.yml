@@ -1,0 +1,20 @@
+---
+Name: taskkill.exe
+Description: Terminate tasks by process id (PID) or image name
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: taskkill.exe /S W10.ad.bitsadmin.com /F /IM cmd.exe
+    Description: Kill a process
+    Usecases:
+      - Terminate a process
+    Function: Processes
+    Comments:
+    MitreAttack:
+      - T1562.001
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

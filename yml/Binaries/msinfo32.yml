@@ -1,0 +1,22 @@
+---
+Name: msinfo32.exe
+Description: Show system information
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: msinfo32.exe
+    Description: System Information
+    Usecases:
+      - Show system information
+    Function: Recon
+    Comments:
+      - 'View -> Remote Computer (Ctrl + R)'
+    MitreAttack:
+      - T1082
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

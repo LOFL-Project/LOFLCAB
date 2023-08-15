@@ -1,0 +1,20 @@
+---
+Name: WinAppDeployCmd.exe
+Description: Deploy a Universal Windows Platform (UWP) app to any Windows 10 device
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: WinAppDeployCmd.exe list -ip 10.0.10.51
+    Description: Show the list of installed UWP apps
+    Usecases:
+    Function: Manage
+    Comments:
+      - Part of the Windows 10 SDK
+    MitreAttack:
+Resources:
+  - https://learn.microsoft.com/en-us/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

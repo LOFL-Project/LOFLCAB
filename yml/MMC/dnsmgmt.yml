@@ -1,0 +1,22 @@
+---
+Name: dnsmgmt.msc
+Description: DNS Manager
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: dnsmgmt.msc /ComputerName DC1.ad.bitsadmin.com
+    Description: DNS Manager
+    Usecases:
+      - Modify/create DNS record for internal phishing website
+    Function: Manage
+    Comments:
+      - 'Alternatively, in GUI right click root node -> Connect to DNS Server'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

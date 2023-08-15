@@ -1,0 +1,20 @@
+---
+Name: srvcheck.exe
+Description: Server share check
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: srvcheck.exe \\DC1.ad.bitsadmin.com
+    Description: Displays a list of server shares and who has access
+    Usecases:
+    Function: Data
+    Comments:
+      - Part of the Windows Server 2003 Resource Kit
+    MitreAttack:
+      - T1135
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

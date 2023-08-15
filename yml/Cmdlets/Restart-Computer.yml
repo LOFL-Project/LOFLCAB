@@ -1,0 +1,21 @@
+---
+Name: Restart-Computer
+Description: Restarts the operating system on local and remote computers
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: Restart-Computer -ComputerName W10.ad.bitsadmin.com,W11.ad.bitsadmin.com
+    Description: Restart machines
+    Usecases:
+      - When persistence has been accomplished, a restart will trigger execution of the payload
+    Function: Sessions
+    Comments:
+      - 'PowerShell Module: `Microsoft.PowerShell.Management`'
+    MitreAttack:
+      - T1529
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,20 @@
+---
+Name: reset.exe
+Description: Reset the session subsytem hardware and software to known initial values
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'reset.exe session 1 /SERVER:W10.ad.bitsadmin.com /V'
+    Description: Logoff user
+    Usecases:
+    Function: Sessions
+    Comments:
+      - Sessions can be queried using [qwinsta.exe](../qwinsta)
+      - Equivalent to [rwinsta.exe](../rwinsta)
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

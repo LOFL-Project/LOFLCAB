@@ -1,0 +1,19 @@
+---
+Name: eventcreate.exe
+Description: Create a custom event in a specified event log
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'eventcreate.exe /S W10.ad.bitsadmin.com /T Error /ID 100 /L Application /D "Some description"'
+    Description: Write error to Application event log
+    Usecases:
+    Function: Logs
+    Comments:
+      - No events can be written to the Security event log
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

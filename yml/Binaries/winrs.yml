@@ -1,0 +1,28 @@
+---
+Name: winrs.exe
+Description: Manage and execute programs remotely
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'winrs.exe -r:W10.ad.bitsadmin.com ipconfig /all'
+    Description: Execute WinRM command
+    Usecases:
+      - Perform reconnaissance or launch implant
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1021.006
+      - T1059.001
+  - Command: 'winrs.exe -r:W10.ad.bitsadmin.com cmd'
+    Description: Launch interactive shell
+    Usecases:
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1021.006
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

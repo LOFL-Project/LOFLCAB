@@ -1,0 +1,24 @@
+---
+Name: Unregister-ScheduledTask
+Description: Unregisters a scheduled task
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: 'Unregister-ScheduledTask -CimSession $s Backdoor -Confirm:$false'
+    Description: Remove scheduled task
+    Usecases:
+      - Remove persistence
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `ScheduledTasks`'
+    MitreAttack:
+      - T1053.005
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

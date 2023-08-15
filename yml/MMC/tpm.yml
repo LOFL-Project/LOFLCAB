@@ -1,0 +1,22 @@
+---
+Name: tpm.msc
+Description: Trusted Platform Module (TPM) Management
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: mmc.exe
+    Description: Trusted Platform Module (TPM) Management
+    Usecases:
+      - Wipe the TPM to impact availability; only the Bitlocker Recovery Key will then help to recover the data
+    Function: Manage
+    Comments:
+      - 'Add or Remove Snap-ins -> TPM Management -> Add -> Another computer: `W11.ad.bitsadmin.com` -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

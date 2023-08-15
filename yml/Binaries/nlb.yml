@@ -1,0 +1,19 @@
+---
+Name: nlb.exe
+Description: Manage Network Load Balancing (NLB)
+Updated: 2023-07-01
+Toolsets:
+  - Server
+  - TODO
+Commands:
+  - Command: nlb.exe
+    Description: TODO
+    Usecases:
+    Function: Network
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,20 @@
+---
+Name: Disable-ADAccount
+Description: Disables an Active Directory account
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+Commands:
+  - Command: Disable-ADAccount -Identity Hacker
+    Description: Disable account
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+      - T1531
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

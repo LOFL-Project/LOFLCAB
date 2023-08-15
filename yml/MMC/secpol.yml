@@ -1,0 +1,22 @@
+---
+Name: secpol.msc
+Description: Local Security Policy
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: gpedit.msc
+    Description: Local Security Policy
+    Usecases:
+    Function: Manage
+    Comments:
+      - Remotely just use [gpedit.msc](../gpedit)
+      - 'Direct link to gpedit.msc -> Computer Configuration -> Windows Settings -> Security Settings'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

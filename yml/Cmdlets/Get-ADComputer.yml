@@ -1,0 +1,28 @@
+---
+Name: Get-ADComputer
+Description: Gets one or more Active Directory computers
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+Commands:
+  - Command: 'Get-ADComputer -SearchBase "OU=Domain Controllers,DC=ad,DC=bitsadmin,DC=com" -Filter *'
+    Description: Query computers from specific OU
+    Usecases:
+      - Query list of domain controllers
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+  - Command: 'Get-ADComputer -Filter ''OperatingSystem -like "*Server 2008*"'' -Properties OperatingSystem'
+    Description: Query computers with specific attribute
+    Usecases:
+      - Identify computers running an unsupported operating system
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

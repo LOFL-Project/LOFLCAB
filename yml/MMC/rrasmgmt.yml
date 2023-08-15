@@ -1,0 +1,23 @@
+---
+Name: rrasmgmt.msc
+Description: Routing and Remote Access
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: rrasmgmt.msc /ComputerName DC1.ad.bitsadmin.com
+    Description: Routing and Remote Access
+    Usecases:
+      - Port mirror all traffic to us?
+    Function: Manage
+    Comments:
+      - 'Alternative: Right click Routing and Remote Access -> Add Server -> The following computer: `DC1.ad.bitsadmin.com` -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

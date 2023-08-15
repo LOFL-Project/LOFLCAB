@@ -1,0 +1,20 @@
+---
+Name: Get-GPO
+Description: Gets one GPO or all the GPOs in a domain
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: Get-GPO
+    Description: TODO
+    Usecases:
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `GroupPolicy`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

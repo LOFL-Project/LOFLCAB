@@ -1,0 +1,20 @@
+---
+Name: rwinsta.exe
+Description: Reset the session subsytem hardware and software to known initial values
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'rwinsta.exe 1 /SERVER:W10.ad.bitsadmin.com /V'
+    Description: TODO
+    Usecases:
+    Function: Sessions
+    Comments:
+      - Sessions can be queried using [qwinsta.exe](../qwinsta)
+      - Equivalent to [reset.exe](../reset)
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

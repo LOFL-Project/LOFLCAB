@@ -1,0 +1,20 @@
+---
+Name: manage-bde.exe
+Description: BitLocker Drive Encryption Configuration Tool
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: manage-bde.exe -ComputerName W10.ad.bitsadmin.com
+    Description: TODO
+    Usecases:
+    Function: Data
+    Comments:
+    MitreAttack:
+      - T1486
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

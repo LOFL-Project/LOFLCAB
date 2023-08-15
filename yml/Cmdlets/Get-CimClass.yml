@@ -1,0 +1,23 @@
+---
+Name: Get-CimClass
+Description: Gets a list of CIM classes in a specific namespace
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-CimClass -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Misc
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `CimCmdlets`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

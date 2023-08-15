@@ -1,0 +1,19 @@
+---
+Name: tsconfig.msc
+Description: Remote Desktop Session Host Configuration
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - Server
+Commands:
+  - Command: tsconfig.msc
+    Description: Remote Desktop Session Host Configuration
+    Usecases:
+    Function: Manage
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

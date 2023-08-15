@@ -1,0 +1,24 @@
+---
+Name: wsus.msc
+Description: Update Services
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: wsus.msc
+    Description: Update Services
+    Usecases:
+      - Deploy malicious updates
+    Function: Manage
+    Comments:
+      - 'Right click -> Connect to Server'
+      - Port 5830/TCP is used in case of HTTP, port 5831/TCP is used in case of TLS
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 5830/TCP
+  - Port: 5831/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

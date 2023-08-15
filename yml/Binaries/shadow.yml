@@ -1,0 +1,21 @@
+---
+Name: shadow.exe
+Description: Remotely control an active session of another user on a Remote Desktop Session Host server
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'shadow.exe 3 /SERVER:W10.ad.bitsadmin.com'
+    Description: RDP shadow a user session
+    Usecases:
+    Function: Sessions
+    Comments:
+      - 'Starting from Windows 8/Server 2012 this binary is replaced with `mstsc.exe`'
+    MitreAttack:
+      - T1563.002
+Resources:
+  - https://blog.bitsadmin.com/blog/spying-on-users-using-rdp-shadowing
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

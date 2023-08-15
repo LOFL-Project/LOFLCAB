@@ -1,0 +1,23 @@
+---
+Name: Get-OdbcDsn
+Description: Gets ODBC DSNs
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: Get-OdbcDsn -CimSession $s
+    Description: TODO
+    Usecases:
+    Function: Misc
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: Wdac'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

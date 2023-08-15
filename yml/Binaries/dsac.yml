@@ -1,0 +1,26 @@
+---
+Name: dsac.exe
+Description: Active Directory Administrative Center
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: dsac.exe
+    Description: Active Directory Administrative Center
+    Usecases:
+      - View user's BitLocker recovery passwords, reset user's passwords and modify security of objects and OUs
+    Function: Domain
+    Comments:
+      - 'Manage -> Add Navigation Nodes -> Connect to other domains -> Connect to: `ad.bitsadmin.com`'
+      - 'Needs to be executed from a OffensiveDC with a dummy domain (e.g. a Windows Server machine with a local `hacker.local` domain) in a `runas /netonly` context'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 389/UDP
+  - Port: 389/TCP
+  - Port: 9389/TCP
+  - Port: 445/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

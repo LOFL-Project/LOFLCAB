@@ -1,0 +1,21 @@
+---
+Name: dhcpmgmt.msc
+Description: DHCP
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: dhcpmgmt.msc /ComputerName DC1.ad.bitsadmin.com
+    Description: DHCP
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Alternatively, in GUI right click root node -> Add server'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

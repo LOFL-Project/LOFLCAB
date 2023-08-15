@@ -1,0 +1,32 @@
+---
+Name: Win32_Process
+Description: Represents a process on an operating system
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: 'Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine = ''C:\tmp\implant.exe''} -CimSession $s'
+    Description: Launch executable
+    Usecases:
+      - Launch implant
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+      - TA0002
+  - Command: Get-CimInstance -ClassName Win32_Process -CimSession $s | select ProcessId,Name,CommandLine | ft * -AutoSize -Wrap
+    Description: List running processes
+    Usecases:
+      - Launch implant
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,20 @@
+---
+Name: takeown.exe
+Description: Allows an administrator to recover access to a file that was denied by re-assigning file ownership
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: takeown.exe /S system /F MyShare\Acme*.doc
+    Description: Take ownership over a file
+    Usecases:
+      - Alter permissions
+    Function: Data
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

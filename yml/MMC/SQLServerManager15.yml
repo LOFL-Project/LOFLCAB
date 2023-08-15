@@ -1,0 +1,22 @@
+---
+Name: SQLServerManager15.msc
+Description: SQL Server 2019 Configuration Manager
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+  - GUI
+Commands:
+  - Command: 'SQLServerManager15.msc /computer:SQL1.ad.bitsadmin.com'
+    Description: SQL Server 2019 Configuration Manager
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Install "Client Tools Connectivity" in the SQL Server Express or Developer installation wizard'
+    MitreAttack:
+Resources:
+  - https://www.microsoft.com/en-us/evalcenter/download-sql-server-2019
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

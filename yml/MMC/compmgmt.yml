@@ -1,0 +1,24 @@
+---
+Name: compmgmt.msc
+Description: Computer Management
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: 'compmgmt.msc /computer:DC1.ad.bitsadmin.com'
+    Description: Computer Management
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Includes: [taskschd.msc](../taskschd), [eventvwr.msc](../eventvwr), [fsmgmt.msc](../fsmgmt), [lusrmgr.msc](../lusrmgr), [perfmon.msc](../perfmon), [devmgmt.msc](../devmgmt), [diskmgmt.msc](../diskmgmt), [services.msc](../services) and [WmiMgmt.msc](../WmiMgmt)'
+      - 'Alternatively in the GUI, right click root node -> Connect to another computer -> `DC1.ad.bitsadmin.com`'
+      - 'Alternative way to launch: `CompMgmtLauncher.exe`'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

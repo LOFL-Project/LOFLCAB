@@ -1,0 +1,23 @@
+---
+Name: CIM_DataFile
+Description: Type of logical file that is a named collection of data or executable code
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: 'Get-CimInstance -Query "Select * from CIM_DataFile Where ((Drive = ''C:'') AND (FileName = ''ntuser'') AND (Extension = ''dat''))" -CimSession $s'
+    Description: Locate files
+    Usecases:
+    Function: Data
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - Pretty slow
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

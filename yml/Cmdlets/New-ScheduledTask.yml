@@ -1,0 +1,24 @@
+---
+Name: New-ScheduledTask
+Description: Creates a scheduled task instance
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: New-ScheduledTask -CimSession $s
+    Description: Create new scheduled task
+    Usecases:
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - See [Register-ScheduledTask](../Register-ScheduledTask)
+      - 'PowerShell Module: `ScheduledTasks`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

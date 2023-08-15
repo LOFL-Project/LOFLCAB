@@ -1,0 +1,20 @@
+---
+Name: Get-Process
+Description: Gets the processes that are running on the local computer or a remote computer.
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: Get-Process -ComputerName DC1.ad.bitsadmin.com
+    Description: List processes
+    Usecases:
+      - Reconnaissance on running processes
+    Function: Processes
+    Comments:
+    MitreAttack:
+      - T1057
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

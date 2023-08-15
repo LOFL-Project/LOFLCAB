@@ -1,0 +1,20 @@
+---
+Name: New-ADOrganizationalUnit
+Description: Creates a new Active Directory organizational unit
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+Commands:
+  - Command: 'New-ADOrganizationalUnit -Name GPO_Test -Path "OU=Azure,OU=Servers,DC=ad,DC=bitsadmin,DC=com"'
+    Description: Create new OU
+    Usecases:
+      - Create new OU for a simulated ransomware attack
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `ActiveDirectory`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

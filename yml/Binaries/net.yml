@@ -1,0 +1,60 @@
+---
+Name: net.exe
+Description: Functionalities related to querying and modifying the domain, services, shares and users
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: net.exe view \\W10.ad.bitsadmin.com /all
+    Description: List all shares
+    Usecases:
+      - Identify all shares, including hidden ones to enumerate for sensitive information
+    Function: Data
+    Comments:
+    MitreAttack:
+      - T1135
+  - Command: net.exe view \\W10.ad.bitsadmin.com
+    Description: List shares
+    Usecases:
+      - Search for files on shares with credential material
+      - Identify files that can be backdoored
+    Function: Data
+    Comments:
+    MitreAttack:
+      - T1135
+  - Command: net.exe time \\W10.ad.bitsadmin.com
+    Description: Show time
+    Usecases:
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - T1124
+  - Command: net.exe user backdoor Password1! /add /domain
+    Description: Create new domain account
+    Usecases:
+      - Add backdoor account to the domain
+    Function: Domain
+    Comments:
+    MitreAttack:
+      - T1136.002
+      - T1078.002
+  - Command: net.exe user Administrator NewPassword1! /domain
+    Description: Update password
+    Usecases:
+      - Overwrite the password of a domain user
+    Function: Domain
+    Comments:
+    MitreAttack:
+  - Command: 'net.exe group "Domain Admins" backdoor /add /domain'
+    Description: Add user to domain group
+    Usecases:
+      - 'Add user to the "Domain Admins" group'
+    Function: Domain
+    Comments:
+    MitreAttack:
+Resources:
+  - https://blog.bitsadmin.com/blog/digging-for-secrets
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,21 @@
+---
+Name: regini.exe
+Description: Modifies the registry from the command line or a script
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - TODO
+Commands:
+  - Command: regini.exe -m \\W10.ad.bitsadmin.com mybackdoor.ini
+    Description: Import ini into registry of remote system
+    Usecases:
+      - Add registry persistence
+    Function: Registry
+    Comments:
+    MitreAttack:
+      - T1112
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

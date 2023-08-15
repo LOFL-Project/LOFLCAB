@@ -1,0 +1,24 @@
+---
+Name: WF.msc
+Description: Windows Defender Firewall with Advanced Security
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: mmc.exe
+    Description: Windows Defender Firewall with Advanced Security
+    Usecases:
+      - Add an exception to the filewall for a backdoor executable/port
+      - Disable the Windows Defender Firewall
+    Function: Manage
+    Comments:
+      - 'mmc.exe -> File -> Add/Remove Snap-In -> Windows Defender Firewall with Advanced Security -> Add -> Another computer: `W10.ad.bitsadmin.com` -> Finish -> OK'
+    MitreAttack:
+      - T1562.004
+Resources:
+Detections:
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

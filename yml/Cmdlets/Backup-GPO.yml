@@ -1,0 +1,21 @@
+---
+Name: Backup-GPO
+Description: Backs up one GPO or all the GPOs in a domain
+Updated: 2023-07-01
+Toolsets:
+  - RSAT
+  - TODO
+Commands:
+  - Command: 'Backup-Gpo -Domain ad.bitsadmin.com -All -Path C:\tmp\GPOBackups'
+    Description: Backup all GPOs of the domain
+    Usecases:
+      - Collect GPOs and search for credentials
+    Function: Domain
+    Comments:
+      - 'PowerShell Module: `GroupPolicy`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

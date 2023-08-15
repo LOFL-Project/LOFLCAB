@@ -1,0 +1,23 @@
+---
+Name: Get-NetNeighbor
+Description: Gets neighbor cache entries
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-NetNeighbor -CimSession $s | select InterfaceIndex,IPAddress,AddressFamily,LinkLayerAddress,State,InterfaceAlias | ft
+    Description: List ARP entries
+    Usecases:
+      - Identify which devices are in the same subnet
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `NetTCPIP`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

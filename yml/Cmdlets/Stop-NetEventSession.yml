@@ -1,0 +1,24 @@
+---
+Name: Stop-NetEventSession
+Description: Stops event and packet capture for a network event session
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Stop-NetEventSession -Name sess -CimSession $s
+    Description: Stop packet capture
+    Usecases:
+      - Sniff authentication traffic on a domain controller and locally crack the hashes
+    Function: Network
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - See all details in [New-NetEventSession](../New-NetEventSession)
+      - 'PowerShell Module: `NetEventPacketCapture`'
+    MitreAttack:
+      - T1047
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

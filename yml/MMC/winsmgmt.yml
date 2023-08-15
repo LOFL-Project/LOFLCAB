@@ -1,0 +1,23 @@
+---
+Name: winsmgmt.msc
+Description: WINS
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: winsmgmt.msc
+    Description: WINS
+    Usecases:
+    Function: Manage
+    Comments:
+      - 'Right click -> Add Server -> WINS server: `DC1.ad.bitsadmin.com` -> OK -> The specified server name could not be validated'
+      - 'To add this server to the console, type the IP address: `10.0.10.10` -> OK'
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+  - Port: 135/TCP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

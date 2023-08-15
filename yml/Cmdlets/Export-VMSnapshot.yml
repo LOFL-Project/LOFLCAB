@@ -1,0 +1,24 @@
+---
+Name: Export-VMSnapshot
+Description: Exports a virtual machine checkpoint to disk
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: 'Export-VMSnapshot -Name ''VM snapshot'' -VMName ''Windows 10 22H2'' -Path C:\tmp -CimSession $s'
+    Description: Create snapshot of VM
+    Usecases:
+      - Create a snapshot to then exfiltrate it over the network
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - Next, using [Copy-Item](../Copy-Item) the snapshot can be copied locally
+      - 'PowerShell Module: `Hyper-V`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

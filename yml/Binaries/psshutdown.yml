@@ -1,0 +1,21 @@
+---
+Name: psshutdown.exe
+Description: Shutdown, logoff and power manage local and remote systems
+Updated: 2023-07-01
+Toolsets:
+  - Sysinternals
+Commands:
+  - Command: psshutdown.exe -f -k \\W10.ad.bitsadmin.com
+    Description: Shutdown computer
+    Usecases:
+      - Affect availability of a computer
+    Function: Sessions
+    Comments:
+      - Makes use of a service that is installed on the remote system. Better make use of [shutdown.exe](../shutdown)
+    MitreAttack:
+      - T1529
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

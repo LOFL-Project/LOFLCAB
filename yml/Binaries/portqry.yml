@@ -1,0 +1,23 @@
+---
+Name: portqry.exe
+Description: Displays the state of TCP and UDP ports
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: portqry.exe -n DC1.ad.bitsadmin.com -e 135
+    Description: Enumerate RPC endpoints
+    Usecases:
+      - Reconnaissance of available RPC interfaces
+    Function: Network
+    Comments:
+      - Download PortQry from the resource link
+    MitreAttack:
+      - T1046
+      - T1007
+Resources:
+  - https://www.microsoft.com/en-us/download/details.aspx?id=17148
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

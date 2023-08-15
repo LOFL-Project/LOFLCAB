@@ -1,0 +1,24 @@
+---
+Name: RAMgmtUI.exe
+Description: Remote Access Management
+Updated: 2023-07-01
+Toolsets:
+  - GUI
+  - RSAT
+Commands:
+  - Command: RAMgmtUI.exe -computerName DC1.ad.bitsadmin.com
+    Description: Remote Access Management
+    Usecases:
+    Function: Manage
+    Comments:
+      - Manage DirectAccess and VPN
+    MitreAttack:
+Resources:
+Detections:
+  - Port: 445/TCP
+  - Port: 135/TCP
+  - Port: 5985/TCP
+  - Port: 389/UDP
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

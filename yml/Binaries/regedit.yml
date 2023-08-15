@@ -1,0 +1,24 @@
+---
+Name: regedit.exe
+Description: Registry Editor
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - GUI
+Commands:
+  - Command: regedit.exe
+    Description: Registry Editor
+    Usecases:
+      - Read secrets from the registry
+      - Add persistence
+    Function: Registry
+    Comments:
+      - 'File -> Connect Network Registry'
+    MitreAttack:
+      - T1012
+      - T1112
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

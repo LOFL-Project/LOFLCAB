@@ -1,0 +1,22 @@
+---
+Name: Win32_DfsNode
+Description: Represents a root or a link of a domain based or a standalone distributed file system (DFS)
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+  - CIMSession
+  - TODO
+Commands:
+  - Command: 
+    Description: 
+    Usecases:
+    Function: Data
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

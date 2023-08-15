@@ -1,0 +1,18 @@
+---
+Name: repadmin.exe
+Description: Diagnose Active Directory replication problems between domain controllers
+Updated: 2023-07-01
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'repadmin.exe /replsummary /homeserver:DC1.ad.bitsadmin.com'
+    Description: Show replication state
+    Usecases:
+    Function: Data
+    Comments:
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

@@ -1,0 +1,21 @@
+---
+Name: rpcdump.exe
+Description: RPC endpoint diagnostic utility
+Updated: 2023-07-01
+Toolsets:
+  - Extra
+Commands:
+  - Command: 'rpcdump.exe /S W10.ad.bitsadmin.com /V /I > W10.txt'
+    Description: List RPC endpoints
+    Usecases:
+      - Identify whether certain services or software is running based on the available RPC interfaces
+    Function: Recon
+    Comments:
+      - Part of the Windows Server 2003 Resource Kit
+    MitreAttack:
+      - TA0043
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin
