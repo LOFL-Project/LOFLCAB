@@ -20,7 +20,7 @@ Commands:
     Description: Install software
     Usecases:
       - Launch and install malicious .msi package
-    Function: Processes
+    Function: Execute
     Comments:
       - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
       - 'Namespace: `ROOT\Cimv2`'
@@ -31,7 +31,7 @@ Commands:
     Description: Uninstall software
     Usecases:
       - Remove security software
-    Function: Processes
+    Function: Manage
     Comments:
       - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
       - 'Namespace: `ROOT\Cimv2`'
@@ -39,6 +39,7 @@ Commands:
       - T1218.007
       - T1562.001
 Resources:
+  - https://blog.bitsadmin.com/living-off-the-foreign-land-windows-as-offensive-platform-part-3#execute-command-lines
 Detections:
 Contributors:
     - Name: Arris Huijgen
