@@ -1,7 +1,7 @@
 ---
 Name: New-PSSession
 Description: Creates a persistent connection to a local or remote computer
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
   - PSSession
@@ -11,7 +11,7 @@ Commands:
     Usecases:
     Function: Execute
     Comments:
-      - Next, for example use [Enter-PSSession](../Enter-PSSession) to interactively enter the session or Invoke-Command to execute a command in the session
+      - Next, for example use [Enter-PSSession](../Enter-PSSession) to interactively enter the session or [Invoke-Command](../Invoke-Command) to execute a command in the session
     MitreAttack:
       - T1021.006
   - Command: '$ps = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://exch2019.ad.bitsadmin.com/PowerShell/ -Authentication Kerberos'

@@ -1,7 +1,7 @@
 ---
 Name: adexplorer.exe
 Description: Advanced Active Directory (AD) viewer and editor
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - GUI
   - Sysinternals
@@ -25,7 +25,7 @@ Commands:
       - Can also be imported to BloodHound format using ADExplorerSnapshot.py or to Adalanche (see references)
     MitreAttack:
 Resources:
-  - https://blog.bitsadmin.com/blog/dealing-with-large-bloodhound-datasets
+  - https://blog.bitsadmin.com/dealing-with-large-bloodhound-datasets
   - https://github.com/c3c/ADExplorerSnapshot.py
   - https://github.com/lkarlslund/Adalanche
 Detections:

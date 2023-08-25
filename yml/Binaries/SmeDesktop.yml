@@ -1,11 +1,10 @@
 ---
 Name: SmeDesktop.exe
 Description: Windows Admin Center
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Extra
   - GUI
-  - PSSession
 Commands:
   - Command: '"C:\Program Files\Windows Admin Center\SmeDesktop.exe"'
     Description: Manage machines
@@ -13,7 +12,6 @@ Commands:
       - Manage Certificates, Devices, Events, Files & file sharing, Firewall, Installed apps, Local users & groups, Networks, Performance Monitor, PowerShell, Processes, Registry, Remote Desktop, Roles & features, Scheduled tasks, Services, Storage, Storage Migration Service, Storage Replica, System Insights and Updates
     Function: Manage
     Comments:
-      - 'Create PSSession `$ps` using [New-PSSession](../New-PSSession/)'
       - Download and install Windows Admin Center and install it
       - Underlying extensively uses WinRM
     MitreAttack:

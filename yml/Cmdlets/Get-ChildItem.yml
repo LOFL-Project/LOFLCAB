@@ -1,7 +1,7 @@
 ---
 Name: Get-ChildItem
 Description: Gets the files and folders in a file system drive.
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
 Commands:
@@ -15,7 +15,7 @@ Commands:
     MitreAttack:
       - T1083
 Resources:
-  - https://blog.bitsadmin.com/blog/digging-for-secrets
+  - https://blog.bitsadmin.com/digging-for-secrets
 Detections:
 Contributors:
     - Name: Arris Huijgen

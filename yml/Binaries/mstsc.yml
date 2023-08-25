@@ -1,7 +1,7 @@
 ---
 Name: mstsc.exe
 Description: Connect to the desktop of remote computers
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
   - GUI
@@ -33,7 +33,7 @@ Commands:
     MitreAttack:
       - T1021.001
 Resources:
-  - https://blog.bitsadmin.com/blog/spying-on-users-using-rdp-shadowing
+  - https://blog.bitsadmin.com/spying-on-users-using-rdp-shadowing
 Detections:
 Contributors:
     - Name: Arris Huijgen

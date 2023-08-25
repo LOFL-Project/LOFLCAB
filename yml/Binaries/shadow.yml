@@ -1,7 +1,7 @@
 ---
 Name: shadow.exe
 Description: Remotely control an active session of another user on a Remote Desktop Session Host server
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
 Commands:
@@ -14,7 +14,7 @@ Commands:
     MitreAttack:
       - T1563.002
 Resources:
-  - https://blog.bitsadmin.com/blog/spying-on-users-using-rdp-shadowing
+  - https://blog.bitsadmin.com/spying-on-users-using-rdp-shadowing
 Detections:
 Contributors:
     - Name: Arris Huijgen

@@ -1,7 +1,7 @@
 ---
 Name: Copy-Item
 Description: Copies an item from one location to another
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
   - PSSession
@@ -40,7 +40,7 @@ Commands:
       - T1570
       - T1021.002
 Resources:
-  - https://blog.bitsadmin.com/blog/extracting-credentials-from-remote-windows-system
+  - https://blog.bitsadmin.com/extracting-credentials-from-remote-windows-system
 Detections:
 Contributors:
     - Name: Arris Huijgen

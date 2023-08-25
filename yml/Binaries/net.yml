@@ -1,7 +1,7 @@
 ---
 Name: net.exe
 Description: Functionalities related to querying and modifying the domain, services, shares and users
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
 Commands:
@@ -53,7 +53,7 @@ Commands:
     Comments:
     MitreAttack:
 Resources:
-  - https://blog.bitsadmin.com/blog/digging-for-secrets
+  - https://blog.bitsadmin.com/digging-for-secrets
 Detections:
 Contributors:
     - Name: Arris Huijgen

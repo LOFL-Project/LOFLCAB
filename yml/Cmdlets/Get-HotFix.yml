@@ -1,7 +1,7 @@
 ---
 Name: Get-HotFix
 Description: Gets the hotfixes that are installed on local or remote computers
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Builtin
 Commands:
@@ -15,7 +15,7 @@ Commands:
     MitreAttack:
       - TA0043
 Resources:
-  - https://blog.bitsadmin.com/blog/windows-security-updates-for-hackers
+  - https://blog.bitsadmin.com/windows-security-updates-for-hackers
 Detections:
 Contributors:
     - Name: Arris Huijgen

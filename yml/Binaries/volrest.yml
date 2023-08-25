@@ -1,7 +1,7 @@
 ---
 Name: volrest.exe
 Description: Previous Version command-line tool
-Updated: 2023-07-01
+Updated: 2023-08-25
 Toolsets:
   - Extra
 Commands:
@@ -17,7 +17,7 @@ Commands:
       - T1083
       - T1003.002
 Resources:
-  - https://blog.bitsadmin.com/blog/extracting-credentials-from-remote-windows-system
+  - https://blog.bitsadmin.com/extracting-credentials-from-remote-windows-system
 Detections:
 Contributors:
     - Name: Arris Huijgen
