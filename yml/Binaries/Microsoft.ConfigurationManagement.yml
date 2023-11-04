@@ -1,7 +1,7 @@
 ---
 Name: Microsoft.ConfigurationManagement.exe
 Description: Microsoft Configuration Manager (MCM)
-Updated: 2023-07-01
+Updated: 2023-11-04
 Toolsets:
   - Extra
   - GUI
@@ -22,6 +22,7 @@ Commands:
 Resources:
   - https://www.microsoft.com/en-us/evalcenter/download-microsoft-endpoint-configuration-manager
   - https://learn.microsoft.com/en-us/mem/configmgr/core/servers/deploy/install/install-consoles
+  - https://http418infosec.com/offensive-sccm-summary
 Detections:
 Contributors:
     - Name: Arris Huijgen

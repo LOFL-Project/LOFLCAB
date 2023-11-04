@@ -1,7 +1,7 @@
 ---
 Name: lusrmgr.msc
 Description: Local Users and Groups
-Updated: 2023-07-01
+Updated: 2023-11-04
 Toolsets:
   - Builtin
   - GUI
@@ -13,9 +13,11 @@ Commands:
       - Change password of existing user
       - Enable and disable accounts
       - Add users to, and remove users from groups
+      - Configure backdoor logon script
     Function: Manage
     Comments:
       - Alternative is to use [compmgmt.msc](../compmgmt)
+      - Through this snap-in it does not seem possible to add a user to a local group on the remote machine. Through [compmgmt.msc](../compmgmt) this _does_ work well though
     MitreAttack:
       - T1531
       - T1136.001

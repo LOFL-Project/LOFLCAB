@@ -1,7 +1,7 @@
 ---
 Name: at.exe
 Description: Schedules commands and programs to run on a computer at a specified time and date
-Updated: 2023-07-01
+Updated: 2023-11-04
 Toolsets:
   - Builtin
 Commands:
@@ -11,6 +11,7 @@ Commands:
       - Create backdoor user or launch implant
     Function: Execute
     Comments:
+      - Deprecated in favor of [schtasks.exe](../schtasks)
     MitreAttack:
       - T1053.002
   - Command: at.exe \\W10.ad.bitsadmin.com

@@ -1,11 +1,11 @@
 ---
 Name: schtasks.exe
 Description: Create, delete, query, change, run and end scheduled tasks
-Updated: 2023-07-01
+Updated: 2023-11-04
 Toolsets:
   - Builtin
 Commands:
-  - Command: 'schtasks.exe /S W10.ad.bitsadmin.com /Create /RU SYSTEM /SC HOURLY /TN "Print Spooler (x64)" /TR "C:\Windows\System32\spoolsv64.exe"'
+  - Command: 'schtasks.exe /S W10.ad.bitsadmin.com /Create /RU SYSTEM /SC HOURLY /TN "Microsoft\Windows\Printing\Print Spooler (x64)" /TR "C:\Windows\System32\spoolsv64.exe"'
     Description: Create new task
     Usecases:
       - Command execution through scheduled task

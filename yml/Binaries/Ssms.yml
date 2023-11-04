@@ -1,12 +1,12 @@
 ---
 Name: Ssms.exe
 Description: SQL Server Management Studio (SSMS)
-Updated: 2023-07-01
+Updated: 2023-11-04
 Toolsets:
   - Extra
   - GUI
 Commands:
-  - Command: ssms.exe
+  - Command: '"C:\Program Files (x86)\Microsoft SQL Server Management Studio 19\Common7\IDE\Ssms.exe"'
     Description: SQL Server Management Studio (SSMS)
     Usecases:
       - 'Connect to MSSQL database and execute commands on the underlying OS using the `xp_cmdshell` stored procedure, execute CLR code or pivot over MSSQL server links'
