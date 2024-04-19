@@ -1,7 +1,7 @@
 ---
 Name: comexp.msc
 Description: Component Services
-Updated: 2023-07-01
+Updated: 2024-04-19
 Toolsets:
   - Builtin
   - GUI
@@ -15,6 +15,7 @@ Commands:
     Comments:
       - 'Component Services -> Computers -> Right click -> New -> Computer -> Browse -> `DC1.ad.bitsadmin.com`'
       - Does not work from OffensiveDC
+      - Alternative way to launch: `dcomcnfg.exe`
     MitreAttack:
 Resources:
 Detections:
