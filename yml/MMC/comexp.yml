@@ -15,7 +15,7 @@ Commands:
     Comments:
       - 'Component Services -> Computers -> Right click -> New -> Computer -> Browse -> `DC1.ad.bitsadmin.com`'
       - Does not work from OffensiveDC
-      - Alternative way to launch: `dcomcnfg.exe`
+      - 'Alternative way to launch: `dcomcnfg.exe`'
     MitreAttack:
 Resources:
 Detections:
