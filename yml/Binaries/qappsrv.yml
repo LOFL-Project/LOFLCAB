@@ -1,7 +1,7 @@
 ---
 Name: qappsrv.exe
 Description: Displays the available Remote Desktop Session Host servers on the network
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
 Commands:
@@ -10,6 +10,7 @@ Commands:
     Usecases:
     Function: Manage
     Comments:
+      - Equivalent to [query.exe](../query) termserver
     MitreAttack:
 Resources:
 Detections:

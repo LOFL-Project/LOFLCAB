@@ -1,7 +1,7 @@
 ---
 Name: qprocess.exe
 Description: Displays information about processes that are running on a Remote Desktop Session Host server
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
 Commands:
@@ -19,6 +19,7 @@ Commands:
       - Reconnaissance on running processes
     Function: Processes
     Comments:
+      - Equivalent to [query.exe](../query) process
     MitreAttack:
       - T1057
 Resources:

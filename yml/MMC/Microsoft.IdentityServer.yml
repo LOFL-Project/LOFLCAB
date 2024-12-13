@@ -1,12 +1,12 @@
 ---
 Name: Microsoft.IdentityServer.msc
 Description: AD FS Management
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - GUI
   - Server
 Commands:
-  - Command: Microsoft.IdentityServer.msc
+  - Command: '%SystemRoot%\ADFS\Microsoft.IdentityServer.msc'
     Description: AD FS Management
     Usecases:
     Function: Manage

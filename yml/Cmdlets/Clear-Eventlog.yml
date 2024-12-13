@@ -1,7 +1,7 @@
 ---
 Name: Clear-Eventlog
 Description: Clears all entries from specified event logs on the local or remote computers.
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
 Commands:
@@ -12,6 +12,7 @@ Commands:
     Function: Logs
     Comments:
       - Be aware that this leaves an event stating that the Security event log has been cleared (event id 1102)
+      - See also [wevtutil.exe](../../Binaries/wevtutil)
     MitreAttack:
       - T1070.001
 Resources:

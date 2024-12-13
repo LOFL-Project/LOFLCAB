@@ -1,12 +1,12 @@
 ---
 Name: Get-NetAdapter
 Description: Gets the basic network adapter properties
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
   - CIMSession
 Commands:
-  - Command: Get-NetAdapter -Name * �CimSession $s
+  - Command: Get-NetAdapter -Name * -CimSession $s
     Description: List adapters
     Usecases:
       - Identify whether a machine is dual-homed

@@ -1,7 +1,7 @@
 ---
 Name: mstsc.exe
 Description: Connect to the desktop of remote computers
-Updated: 2023-08-25
+Updated: 2024-12-13
 Toolsets:
   - Builtin
   - GUI
@@ -22,6 +22,7 @@ Commands:
       - If RDP provides access to a different network segment, SocksOverRDP can be used to pivot into that segment
     Function: Sessions
     Comments:
+      - See also [RDCMan.exe](../RDCMan)
     MitreAttack:
       - T1021.001
   - Command: 'mstsc.exe /v:SP2019.ad.bitsadmin.com /shadow:1 /noConsentPrompt'

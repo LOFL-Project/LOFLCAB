@@ -1,7 +1,7 @@
 ---
 Name: RDCMan.exe
 Description: Remote Desktop Connection Manager
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - GUI
   - Sysinternals
@@ -12,6 +12,7 @@ Commands:
     Function: Sessions
     Comments:
       - 'Session -> Connect To (Ctrl + Q) -> Enter server name'
+      - See also [mstsc.exe](../mstsc)
     MitreAttack:
       - T1021.001
 Resources:

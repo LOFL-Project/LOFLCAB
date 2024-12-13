@@ -1,7 +1,7 @@
 ---
 Name: query.exe
 Description: Displays information about processes, sessions, and Remote Desktop Session Host servers
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
 Commands:
@@ -11,6 +11,7 @@ Commands:
       - Reconnaissance on currently active sessions
     Function: Sessions
     Comments:
+      - Equivalent to [qwinsta.exe](../qwinsta)
     MitreAttack:
   - Command: 'query.exe user /server:W10.ad.bitsadmin.com'
     Description: List logged in users
@@ -18,6 +19,7 @@ Commands:
       - Reconnaissance on currently active users
     Function: Sessions
     Comments:
+      - Equivalent to [quser.exe](../quser)
     MitreAttack:
   - Command: 'query.exe process /server:W10.ad.bitsadmin.com *'
     Description: List all processes
@@ -25,6 +27,7 @@ Commands:
       - Reconnaissance on running processes
     Function: Processes
     Comments:
+      - Equivalent to [qprocess.exe](../qprocess)
     MitreAttack:
       - T1057
   - Command: 'query.exe process /server:W10.ad.bitsadmin.com keepass.exe'
@@ -33,6 +36,7 @@ Commands:
       - Identify specific running process
     Function: Processes
     Comments:
+      - Equivalent to [qprocess.exe](../qprocess)
     MitreAttack:
       - T1057
   - Command: query.exe termserver
@@ -40,6 +44,7 @@ Commands:
     Usecases:
     Function: Sessions
     Comments:
+      - Equivalent to [qappsrv.exe](../qappsrv)
     MitreAttack:
 Resources:
 Detections:

@@ -1,7 +1,7 @@
 ---
 Name: qwinsta.exe
 Description: Display information about Remote Desktop Services sessions
-Updated: 2023-07-01
+Updated: 2024-12-13
 Toolsets:
   - Builtin
 Commands:
@@ -11,6 +11,7 @@ Commands:
       - Check whether the system has high-privileged users logged in to then laterally move to it
     Function: Sessions
     Comments:
+      - Equivalent to [query.exe](../query) session
     MitreAttack:
 Resources:
 Detections:
