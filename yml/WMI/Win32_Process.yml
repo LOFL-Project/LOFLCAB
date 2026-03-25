@@ -19,7 +19,7 @@ Commands:
   - Command: Get-CimInstance -ClassName Win32_Process -CimSession $s | select ProcessId,Name,CommandLine | ft * -AutoSize -Wrap
     Description: List running processes
     Usecases:
-      - Launch implant
+      - Identify running security software
     Function: Processes
     Comments:
       - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
