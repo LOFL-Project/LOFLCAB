@@ -1,0 +1,20 @@
+---
+Name: certutil.exe
+Description: You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
+Updated: 2026-03-28
+Toolsets:
+  - Builtin
+Commands:
+  - Command: 'certutil.exe -config casub1.ad.bitsadmin.com\LabSubCA1 -view csv | ConvertFrom-Csv'
+    Description: List issued certificates
+    Usecases:
+      - Evaluate which certificates are being requested from the certificate authority
+    Function: Recon
+    Comments:
+      - 'Alternatively use `certutil.exe -v -config casub1.ad.bitsadmin.com\LabSubCA1 -view csv > certificates.txt` to get a full dump which includes the `.crt` files of the issued certificates.'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin
