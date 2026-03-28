@@ -1,16 +1,22 @@
 ---
 Name: msg.exe
 Description: Send a message to a user
-Updated: 2023-07-01
+Updated: 2026-03-28
 Toolsets:
   - Builtin
-  - TODO
 Commands:
-  - Command: msg.exe
-    Description: TODO
+  - Command: |
+      @'
+      A quick step to keep you safe.
+
+      Please double-click the "Secure My System" icon on your Desktop now so we can secure your computer and protect your files.
+      '@ | msg.exe User1 /V /W /TIME:86400 /SERVER:W11B.ad.bitsadmin.com
+    Description: Send a message to a user
     Usecases:
-    Function: Sessions
+      - After dropping an implant binary on a user's desktop, perform social engineering by sending a message to a specific user to launch the implant
+    Function: Misc
     Comments:
+      - 'In this example PowerShell command the target for the message on the remote system is User1 and the timeout before the message automatically closes is 24 hours (default: 60 seconds)'
     MitreAttack:
 Resources:
 Detections:
