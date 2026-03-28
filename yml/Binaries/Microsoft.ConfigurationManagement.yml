@@ -6,14 +6,14 @@ Toolsets:
   - Extra
   - GUI
 Commands:
-  - Command: '"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe"'
+  - Command: '"C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe"'
     Description: Manage Microsoft Configuration Manager (MCM)
     Usecases:
       - Collect information about systems
       - Deploy software implant to system
     Function: Manage
     Comments:
-      - Download software, including Configuration Manager console on reference 1
+      - 'Download software, including Configuration Manager console on reference 1. Alternatively the client installer (`.msi`) can be copied from an existing MCM (lab) instance from a subfolder of `%ProgramFiles(x86)%\ConfigMgr10\AdminconsoleSetup`'
       - Installation instructions on reference 2
       - 'At the Microsoft Configuration main screen, choose "Install Configuration Manager console"'
       - 'Add the `SMS:DebugView` parameter to the commandline to get an additional option (Tools) in the menu'
