@@ -1,0 +1,22 @@
+---
+Name: rmtshare.exe
+Description: Manage file shares on a remote server
+Updated: 2026-03-28
+Toolsets:
+  - Extra
+  - TODO
+Commands:
+  - Command: 'rmtshare.exe "\\W11B.ad.bitsadmin.com\FullDrive$"="C:\" /GRANT "ad.bitsadmin.com\User2:Full Control"'
+    Description: Create a new hidden share
+    Usecases:
+      - Create an share alternative to `C$` to access the full harddrive
+    Function: Manage
+    Comments:
+      - Not tested
+      - Part of the Windows 2000 Resource Kit
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin
