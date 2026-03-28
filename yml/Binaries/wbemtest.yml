@@ -25,9 +25,9 @@ Commands:
     MitreAttack:
       - T1047
 Resources:
-  - Link: https://learn.microsoft.com/en-us/intune/configmgr/develop/core/understand/introduction-to-wbemtest
-  - Link: https://4sysops.com/archives/wbemtest-part-1-testing-wmi-connectivity/
-  - Link: https://patchmypc.com/blog/intro-wbemtest/
+  - https://learn.microsoft.com/en-us/intune/configmgr/develop/core/understand/introduction-to-wbemtest
+  - https://4sysops.com/archives/wbemtest-part-1-testing-wmi-connectivity/
+  - https://patchmypc.com/blog/intro-wbemtest/
 Detections:
 Contributors:
     - Name: David Lee
