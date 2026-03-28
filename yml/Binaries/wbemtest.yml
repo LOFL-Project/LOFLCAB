@@ -1,27 +1,32 @@
 ---
 Name: wbemtest.exe
-Description: 'One useful tool for working with WMI/WBEM is WBEMTEST. There are many WMI tools out there. However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe. There are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.'
+Description: UI tool for interacting with Windows Management Instrumentation (WMI)
 Updated: 2026-03-24
 Toolsets:
   - Builtin
   - GUI
-  - CIMSession
 Commands:
-  - Command: Process call create through wbemtest
-    Description: 'Connect to the target namespace as `\\<TARGETHOST>\root\cimv2`, select Execute Method, Object path as `Win32_Process`, Method as `Create`, Edit in Parameters, edit the `CommandLine` property, save property, save method, click on "Execute!" button.'
+  - Command: wbemtest.exe
+    Description: Launch process
     Usecases:
-      - `wmic.exe` deprecation but you still want to use native WMI
-    Function:
-      - Execute
-      - Processes
-      - Logs
-      - Domain
-      - Network
-      - Recon
+      - Launch implant
+    Function: Execute
     Comments:
+      - '`wmic.exe` deprecation but you still want to use native WMI'
+      - 'One useful tool for working with WMI/WBEM is WBEMTEST. There are many WMI tools out there. However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe. There are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.'
+      - 'Connect to the target namespace as `\\<TARGETHOST>\root\cimv2`, select Execute Method, Object path as `Win32_Process`, Method as `Create`, Edit in Parameters, edit the `CommandLine` property, save property, save method, click on "Execute!" button.'
       - There is a lot of clicking required.
       - Requires admin access on the remote machine, but you can still do a lot of local enumeration.
     MitreAttack:
+      - T1047
+  - Command: wbemtest.exe
+    Description: Query processes
+    Usecases:
+      - Reconnaissance on running processes
+    Function: Processes
+    Comments:
+    MitreAttack:
+      - T1057
       - T1047
 Resources:
   - https://learn.microsoft.com/en-us/intune/configmgr/develop/core/understand/introduction-to-wbemtest
