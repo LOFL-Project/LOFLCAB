@@ -1,11 +1,22 @@
 ---
 Name: MSFT_MTProcess
 Description: The process data object
-Updated: 2026-03-25
+Updated: 2026-03-28
 Toolsets:
   - Builtin
   - CIMSession
 Commands:
+  - Command: 'Invoke-CimMethod -Namespace Root\Microsoft\Windows\ManagementTools -ClassName MSFT_MTProcess -MethodName CreateProcess -Arguments @{CommandLine=''C:\ProgramData\implant.exe /launch''} -CimSession $s'
+    Description: Launch executable
+    Usecases:
+      - Launch implant
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'Namespace: `Root\Microsoft\Windows\ManagementTools`'
+      - WMI class only exists on Windows Server 2016 or newer
+    MitreAttack:
+      - TA0002
   - Command: Get-CimInstance -Namespace Root\Microsoft\Windows\ManagementTools -ClassName MSFT_MTProcess -CimSession $s
     Description: List running processes
     Usecases:
@@ -28,6 +39,7 @@ Commands:
       - 'Namespace: `Root\Microsoft\Windows\ManagementTools`'
       - WMI class only exists on Windows Server 2016 or newer
     MitreAttack:
+      - T1003.001
 Resources:
   - https://specterops.io/blog/2025/09/18/more-fun-with-wmi/
 Detections:
