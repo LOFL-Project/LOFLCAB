@@ -1,6 +1,6 @@
 ---
 Name: wbemtest.exe
-Description: One useful tool for working with WMI/WBEM is WBEMTEST. There are many WMI tools out there. However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.
+Description: One useful tool for working with WMI/WBEM is WBEMTEST. There are many WMI tools out there. However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe. There are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.
 Updated: 2026-03-24
 Toolsets:
   - Builtin
@@ -8,9 +8,9 @@ Toolsets:
   - CIMSession
 Commands:
   - Command: Process call create through wbemtest
-    Description: Connect to the target namespace as \\<TARGETHOST>\root\cimv2, select Execute Method, Object path as "win32_process", Method as "Create", Edit in Parameters, edit the CommandLine property, save property, save method, click on "Execute!" button.
+    Description: Connect to the target namespace as `\\<TARGETHOST>\root\cimv2`, select Execute Method, Object path as `Win32_Process`, Method as `Create`, Edit in Parameters, edit the `CommandLine` property, save property, save method, click on "Execute!" button.
     Usecases:
-      - wmic deprecation but you still want to use native WMI 
+      - `wmic.exe` deprecation but you still want to use native WMI
     Function:
       - Execute
       - Processes
